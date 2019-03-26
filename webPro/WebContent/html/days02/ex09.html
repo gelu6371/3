@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tae site</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+</script>
+<button>Toggle1</button>
+<div style="background-color: black;color:white;padding: 20px">
+ <h3>div 설명</h3>
+ <p>
+  div:블럭모드<br>
+  html 요소 용기<br>
+   기타 특징<br>
+ </p>
+</div>
+
+</head>
+<body>
+<script>
+/* button 태그 -> jquery 객체 클릭 이벤트 발생  */
+$( "button" ).click(function() {
+/* div 태그 -> jquery 객체.. slideToggle();  */
+$( "div" ).slideToggle( "slow" );
+});
+</script>
+</body>
+</html>

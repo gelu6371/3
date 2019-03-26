@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tae site</title>
+</head>
+<body>
+google<br>
+<img alt="" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+<!-- html 이미지  -->
+<!-- 
+모든 html 요소는 속성(attribute)을 가진다.
+속성은 html 요소의 추가 정보를 제공
+속성은 시작태그 안에 선언
+시작태그 속성명="속성값" 또는 속성명='속성값' 또는 속성명=속성값 속성명을 여러개 줄수 있고 권장하는 것은 ""이다.
+src ="URL"
+alt ="CDATA" -> 문자열 
+
+URL(Uniform Resource Locators) 
+- 웹서버의 페이지를 URL(웹 주소)를 통해서 브라우저가 요청한다.
+- 구성 ?
+  schema://prefix.domain:port/path/filename
+  schema : 인터넷 서비스 유형 - http, https, ftp, file, ...
+  prefix : 도메인 접두사 - www
+  domain : 인터넷 도메인명 - naver.com 
+  port : 호스트의 포트번호 - http의 기본포트(80)
+  path : 서버의 경로
+  filename : 문서 또는 자원의 이름
+  예) http://localhost/webPro/html/days02/ex01.html
+   schema   domain   ------ path ------  filename
+   
+URL 인코딩 
+URL은 ASCII 문자 집합을 사용하여 인터넷을 통해서만 전송할 수 있다.
+지금처럼 비ASCII문자집합(한글)은 변환되어진다.
+%16진수값으로 대체된다.
+URL은 공백을 포함할 수 없다. 공백 : + 또는 %20 대체된다.
+-->
+<img src="http://localhost/webPro/html/days02/images/googlelogo_color_272x92dp.png" alt="googlelogo">
+<img src="http://localhost/webPro/html/days02/images/googlelogo_color_272+92dp.png" alt="googlelogo">
+<hr> <!-- A [h]orizontal [r]ule : 구분선--> 
+<!-- 
+이미지의 크기 설정 
+width 속성 html 단위를 생략하면 픽셀(기본,px)
+height 속성
+-->
+<img width="141"height="46"src="http://localhost/webPro/html/days02/images/googlelogo_color_272x92dp.png" alt="googlelogo">
+<!-- 
+이미지 크기 : width 속성, heigth 속성을 사용해도 되지만 style 속성을 사용하도록 권장한다.
+ 이유 : 스타일시트가 이미지 크기를 변경하지 못하게 할 수 있기 때문에...
+ style은 반드시 단위를 붙여야 한다.
+-->
+<img style="width:141px;height:46"src="http://localhost/webPro/html/days02/images/googlelogo_color_272x92dp.png" alt="googlelogo">
+<hr>
+<!-- 단위 : % -> 부모요소(body)의 기준이다. -->
+<!-- width : 100% height : X 설정 안하면 비율적으로 같이 늘어난다. -->
+<img width="100%"src="http://localhost/webPro/html/days02/images/googlelogo_color_272x92dp.png" alt="googlelogo">
+<hr>
+<!-- 
+절대경로 : http://localhost/webPro/html/days02/images/googlelogo_color_272x92dp.png
+상대경로 : 
+상대주소기준 : http://localhost/webPro/html/days02/
+웹에서 경로 구분자 : /(슬래쉬)
+-->
+
+<img style="width:141px;height:46"
+src="../..//googlelogo_color_272x92dp.png" alt="googlelogo">
+<!-- ../ : 상위폴더로 올라가겠다.  -->
+
+<img style="width:141px;height:46"
+src="../..//googlelogo_color_272x92dp.png" alt="googlelogo">
+
+<hr>
+<img style="width:141px;height:46"
+src="../days01/images/googlelogo_color_272x92dp.png" alt="googlelogo">
+
+<img style="width:141px;height:46"
+src="http://localhost/webPro/html/days01/images/googlelogo_color_272x92dp.png" alt="googlelogo">
+</body>
+</html>
