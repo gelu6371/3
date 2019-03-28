@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 3. 28.오후 3:09:37</title>
+</head>
+<body>
+<!-- 
+emmet(에밋) : HTML, XML, XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인이다.
+                         원래 젠코딩(Zen Coding)으로 부르다가 에밋(Emmet)으로 이름을 변경했다. 
+                         매우 간단한 몇 가지 코드만 입력하면, 자동으로 완전한 HTML 코드를 생성해 준다.
+             ctrl + e 
+  -->
+ 
+
+<!-- 중첩 연산자 -->
+<!-- 자식 : div>ul>li -->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+
+<!-- 형제 :  div+ul+li -->
+<div></div>
+<ul></ul>
+<li></li>
+
+<!-- ul>li*5>a -->
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+
+<!--  div>(header>ul>li*2>a)+footer>p 또는 div>header>ul>li*2>a^^^footer>p -->
+<div>
+	<header>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</header>
+	<footer>
+		<p></p>
+	</footer>
+</div>
+
+<!-- (div>dl>(dt+dd)*3)+p -->
+<div>
+	<dl>
+		<dt></dt>
+		<dd></dd>
+		<dt></dt>
+		<dd></dd>
+		<dt></dt>
+		<dd></dd>
+	</dl>
+</div>
+<p></p>
+
+<!-- 속성 연산자 -->
+<!-- div[id=box] -->
+<div id="box"></div>
+
+<!-- div[id=box clas=team01] -->
+<div id="box" clas="team01"></div>
+
+<!-- #demo.team.manager.teacher -->
+<div id="demo" class="team manager teacher"></div>
+
+<!-- table+ -->
+<table>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+<!-- ul+ -->
+<ul>
+	<li></li>
+</ul>
+
+<!-- select + -->
+<select name="" id="">
+	<option value=""></option>
+</select>
+
+<!-- 사용자가 지정하는 특성(속성) -->
+<!-- 
+table 1행 3열
+      2행 3열
+      3행 3열
+      4행 1열(colspan="3")
+ -->
+<!-- table>(tr*3>td*3)+tr>td[colspan=3] --> 
+<table>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="3"></td>
+	</tr>
+</table> 
+ 
+<!-- a[href=http://www.naver.com target=_blank]>{naver}  -->
+<a href="http://www.naver.com"target="_blank">naver</a>
+
+
+<!-- 항목 번호 매기기 : $ 연산자(* 연산자가 쓰여야 한다) -->
+<!-- ul>li*5>{item $} -->
+<ul>
+	<li>item 1</li>
+	<li>item 2</li>
+	<li>item 3</li>
+	<li>item 4</li>
+	<li>item 5</li>
+</ul>
+ 
+<!-- ul>li*5>{item $$$} -->
+ <ul>
+ 	<li>item 001</li>
+ 	<li>item 002</li>
+ 	<li>item 003</li>
+ 	<li>item 004</li>
+ 	<li>item 005</li>
+ </ul>  
+ 
+<!-- 번호 매기기(역순) : @- --> 
+<!-- ul>li.item$@-*5 --> 
+ <ul>
+ 	<li class="item5"></li>
+ 	<li class="item4"></li>
+ 	<li class="item3"></li>
+ 	<li class="item2"></li>
+ 	<li class="item1"></li>
+ </ul>
+
+<!-- 항목 번호 매기기 시작값 변경 : @n -->
+<!-- ul>li.item$@11*5 -->
+<ul>
+	<li class="item11"></li>
+	<li class="item12"></li>
+	<li class="item13"></li>
+	<li class="item14"></li>
+	<li class="item15"></li>
+</ul>
+<!-- ul>li.item$@-11*5 -->
+<ul>
+	<li class="item15"></li>
+	<li class="item14"></li>
+	<li class="item13"></li>
+	<li class="item12"></li>
+	<li class="item11"></li>
+</ul>
+
+<!-- {} 중괄호를 사용해서 텍스트를 추가 할 수 있다. -->
+<!-- a{naver} -->
+<a href="">naver</a>
+
+<!-- a>{n}+b{ave}+{r} -->
+<a href="">n<b>ave</b>r</a>
+
+<!-- li*5>lorem4 -->
+<li>Lorem ipsum dolor sit.</li>
+<li>Nihil harum blanditiis architecto.</li>
+<li>Eaque fuga quisquam architecto!</li>
+<li>Iste ipsum quae totam.</li>
+<li>Fugiat laboriosam reprehenderit saepe.</li>
+
+<hr>
+<!-- div.wrap>div.content 또는 .wrap>.content -->
+<div class="wrap">
+	<div class="content"></div>
+</div>
+
+<!-- em>span.info 또는 em>.info -->
+<em><span class="info"></span></em>
+
+<!-- table>#row$*4 -->
+<table>
+	<tr id="row1"></tr>
+	<tr id="row2"></tr>
+	<tr id="row3"></tr>
+	<tr id="row4"></tr>
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 3. 28.오전 9:04:47</title>
+<style>
+ table, td{
+	border:solid 1px gray;
+	border-collapse: collapse;
+ }
+ table {
+ 	width:200px;
+ }
+ input[type=text], input[type=password] {
+ 	width:97%;
+ }
+ caption {
+ 	background-color: black;
+ 	color: white;
+ 	font-weight: bold;
+ }
+
+</style>
+</head>
+<body>
+
+<input type="submit" /><button type="submit">서브밋 버튼</button><br>
+<input type="reset"><button type="reset">리셋 버튼</button><br>
+<input type="button" value="일반 버튼" /><button type="button">일반 버튼</button><br>
+
+
+
+
+
+<hr>
+<!-- input type="text" 한 라인 입력 -->
+<textarea rows="5" cols="">A multi-line text field</textarea> 
+<!-- 
+멀티 라인 입력
+rows = 텍스트 영역의 보여주는 행의 수
+cols = 텍스트 영역의 보여주는 열의 수 
+ -->
+
+<hr>
+<!-- <html 양식(form)></html> -->
+<form action="ex01_ok.jsp"method="get" target="_blank">
+
+<table>
+	<caption>로그인</caption>
+	<tr>
+		<td align="center"width="30%">id</td>
+		<td width="70%"><input type="text"id="uid"name="uid" autofocus="autofocus" tabindex="1" maxlength="15"size="10"autocomplete="off"/></td>
+	</tr>
+	<tr>
+		<td align="center">password</td>
+		<td><input type ="password" size="10" maxlength="8" tabindex="2" name="password">
+ <br>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+		<input type="submit" value="logon"> <input type="reset" value="reset"></td>
+	</tr>
+</table>
+<!-- input element -->
+
+<!-- 
+autofocus = 깜빡거리기.
+size = 네모칸의 크기
+readonly = 읽기 전용(수정 못함)
+autocomplete = 자동 완성. 그전에 썼던 내용이 자동으로 뜨는것 off로 설정해놓으면 안뜬다.
+  -->
+
+</form>
+<form action="ex02_ok.jsp">
+ <fieldset> <!-- 그룹화 시켜줘서 박스모양이 생긴다.  -->
+  <legend>개인정보</legend> <!-- field 박스모양의 제목(?)  -->
+성별 :
+<input type="radio" value="m" name="gender" checked="checked" /> 남자
+<input type="radio" value="f" name="gender" /> 여자
+<br>
+팀 :
+<input type="radio" value="1" name="team" checked="checked" /> 1조
+<input type="radio" value="2" name="team" /> 2조
+<input type="radio" value="3" name="team" /> 3조
+<input type="radio" value="4" name="team" /> 4조
+<br>
+소유한 자동차 :
+<br>
+<input type="checkbox" name="cars" value="g" />그랜져<br>
+<input type="checkbox" name="cars" value="e" checked="checked" />에쿠스<br>
+<input type="checkbox" name="cars" value="s" />소나타<br>
+<input type="checkbox" name="cars" value="b" />BMW<br>
+<input type="checkbox" name="cars" />기타<br>
+<input type="text" style="visibility: hidden"> <!-- 기타 선택했을때 내용을 쓸수 있는 상자를 숨기겠다. 기타를 선택했을때 상자가 나오게 하기위해서는 자바스크립트 필요  -->
+<br>
+ <!-- 
+ checkbox = 체크박스 모양의 선택
+ radio = 동그라미모양의  선택
+ name으로 그룹화해서 같은 그룹에서는 하나씩만 선택할 수 있다.
+ checked = 기본적으로 선택하고 시작한다.
+   -->
+<input type="submit" value ="send" />
+</fieldset>
+ </form>
+
+<!--
+	1. form의 method='get'
+	 ㄱ. url 요청주소에 ? 필드명(파라미터명)으로 전송
+	 ㄴ. url의 길이에 제한이 있다.(약 3000자)
+	 ㄷ. 중요한 데이터는 전송하지 않는다.
+
+	 
+	2. form의 method='post'
+	 ㄱ. get보다 보안적인 측면에서 사용
+	 ㄴ. 길이 제한이 없어서 한개 또는 여러개의 첨부파일이 있는 경우 사용
+  -->
+  <hr>
+  최종 학력 : 
+  <!-- 콤보 박스  -->
+  <!-- option에서 value값이 생략되었다면 text 값이 넘어간다.  -->
+  <select name="final_education">
+  <option value="1">고졸</option>
+  <option value="2" selected="selected">대졸</option> <!-- 대졸을 기본으로 선택하겠다.  -->
+  <option value="3">대학원졸</option>
+  <option value="4">기타</option>
+  </select>
+  <br>
+  부서 선택:
+  <select name="deptno" id="">
+  	<option value="10" selected="selected">ACCOUNTING</option>
+  	<option value="20">RESEARCH</option>
+  	<option value="30">SALES</option>
+  	<option value="40">OPERATIONS</option>
+  </select>
+  <hr>
+  <select name="cars" size="2" > <!-- size : 보여지는 option 개수, 나중에 다중선택을 하기 위해서 size 속성을 준다.(다중선택하기 위해서는 multiple도 필요)  -->
+  	<option value="Volvo">Volvo</option>
+  	<option value="Saab">Saab</option>
+  	<option value="BMW">BMW</option>
+  	<option value="Audi">Audi</option>
+  </select>
+</body>
+</html>

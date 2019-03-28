@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tae site</title>
+<style>
+ button{
+ 	font-size: 10px;
+ 	width:50px;
+ }
+ table{
+ 	margin:0 auto; /* 아래 위로는 0 왼쪽 오른쪽은 auto, 다르게 쓰면 0(top) auto(right) 0(bottom) auto(left) */
+ 	border-collapse: collapse; /* 붕괴하다  */
+ }
+ th{
+ 	background-color: black;
+ 	color: white;
+ }
+ tr:nth-child(even){
+ 	background-color: #eee;
+ }
+ tbody td /* tbody의 후손 td  */{
+ 	border-bottom: dotted 1px gray;
+ }
+</style>
+</head>
+<body>
+<table style="width:500px" border="1">
+<caption>DEPT INFO</caption>
+<thead>
+ <tr>
+  <th><input type="checkbox">deptno</th> <!-- A table header cell : 자동으로 가운데정렬되고 굵기도 굵어진다.-->
+  <th>dname</th>
+  <th>loc</th>
+   </tr>
+<!-- 
+ <tr>
+  <td align="center"><b>deptno</b></td>
+  <td align="center"><b>dname</b></td>
+  <td align="center"><b>loc</b></td>
+   </tr>
+   --> 
+ <tr>
+  <td><input type="checkbox">10</td>
+  <td>ACCOUNTING</td>
+  <td>NEW YORK</td>
+   </tr>
+ <tr>
+  <td><input type="checkbox">20</td>
+  <td>RESEARCH</td>
+  <td>DALLAS</td>
+   </tr>
+ <tr>
+  <td><input type="checkbox">30</td>
+  <td>OPEATIONS</td>
+  <td>CHICAGO</td>
+   </tr>
+ <tr>
+  <td><input type="checkbox">40</td>
+  <td>SALES</td>
+  <td>BOSTON</td>
+   </tr>   
+</thead>
+
+<tbody>
+</tbody>
+<tfoot>
+  <tr>
+   <td colspan="3"align="center"valign="middle">
+   <button>add</button><button>edit</button><button>remove</button>
+   </td>
+  </tr>
+
+</tfoot>
+</table>
+
+</body>
+</html>
