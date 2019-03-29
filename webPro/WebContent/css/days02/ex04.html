@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 3. 29.오전 10:35:51</title>
+<style>
+ p.solid{
+	border-style: solid; 
+ }
+ p.dotted{
+ 	border-style: dotted;
+ }
+ p.dashed{
+ 	border-style: dashed;
+ }
+ p.double{
+ 	border-style:double;
+ }
+ p.groove{
+ 	border-style: groove;
+ }
+ p.ridge{
+ 	border-style: ridge;
+ }
+ p.inset{
+ 	border-style: inset;
+ }
+ p.outset{
+ 	border-style: outset;
+ }
+ p.hidden{
+ 	border-style: hidden;
+ }
+ 
+ /* groove, ridge, inset, outset : 3D 테두리 */
+ /* none : 없다. */
+ /* hidden : 숨기다. */
+ /* border-style 없으면 border-width, border-color는 안된다. */
+
+p#box {
+	 
+	padding: 10px;
+	/*
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+	
+	border-style: doted solid;  위에 것이랑 같은 코딩 
+	 */
+	 
+	 background-color: lightgray;
+	 /* border-left: solid 6px red; */
+	 border-bottom: solid 6px red;
+}
+
+p#demo {
+	width : 500px;
+	height: 100px;
+	text-align: center;
+	border:2px solid red;
+	/* border-radius: 5px 15px 20px 25px; border-radius : 둥근 테두리(왼쪽위, 오른쪽위, 오른쪽아래, 왼쪽아래)  */
+	/* border-radius: 25px;  4군데 다 25px  */
+	/* border-radius: 5px 25px 왼쪽위, 오른쪽아래 : 5px 오른쪽위, 왼쪽아래 : 25px*/
+	/* border-radius: 5px 20px 25px 왼쪽위 : 5px 오른쪽위, 왼쪽아래 : 20px, 오른쪽아래 : 25px */
+	border-radius: 50px; /* 타원모양 : height의 반만큼 주면 된다.  */
+}
+
+</style>
+</head>
+<body>
+
+<p id="demo">Lorem ipsum dolor sit amet.</p>
+
+<p id="box">Lorem ipsum dolor sit amet.</p>
+
+
+<!-- css borders(테두리) -->
+<p class="solid">Lorem ipsum dolor sit amet.</p>
+<p class="dotted">Quo numquam dolor cumque soluta!</p>
+<p class="dashed">Id consequuntur error vel repellat.</p>
+<p class="double">Officiis id provident nemo nostrum!</p>
+<p class="groove">Non accusantium facere aut ipsum!</p>
+<p class="ridge">Quos vero facere molestias consequuntur.</p>
+<p class="inset">Fuga provident aperiam optio quae.</p>
+<p class="outset">Natus quidem sint pariatur provident.</p>
+<p class="hidden">Libero quae voluptas est soluta!</p>
+<p class="">Quis dolor doloremque animi explicabo!</p>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 3. 29.오후 2:04:55</title>
+<style>
+.special_bg {
+	position: relative;
+	height: 130px;
+}
+
+.search {
+	position: absolute;
+	top: 50%;
+	left: 219px;
+	margin-top: -20px;
+	width: 512px;
+}
+
+.search .green_window {
+	display: inline-block;
+	width: 470px;
+	height: 45px;
+	border: 2px solid #03cf5d;
+	background-color: #fff;
+}
+
+.search .input_text {
+	margin: 12px 0 0 9px;
+	width: 405px;
+	height: 23px;
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+	color: #000;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 23px;
+	*ime-mode: active;
+}
+
+.blind {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+}
+
+.search .ico_search_submit {
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	width: 21px;
+	height: 21px;
+	background-position: -4px -60px;
+}
+
+.search .btn_arw .ico_arr, .search .btn_keyboard .ico_keyboard, .ico_arr,
+	.ico_search_submit {
+	background-image:
+		url(https://s.pstatic.net/static/www/img/2018/sp_search.png);
+	background-image: linear-gradient(transparent, transparent),
+		url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+	background-repeat: no-repeat;
+}
+
+.search .sch_smit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: visible;
+	width: 49px;
+	height: 49px;
+	border: 0;
+	background: #03cf5d;
+}
+
+.search .btn_arw {
+	position: absolute;
+	top: 50%;
+	right: 49px;
+	margin-top: -21px;
+	padding: 19px 12px 19px 6px;
+}
+
+.search .btn_arw .ico_arr {
+	display: block;
+	width: 9px;
+	height: 4px;
+	background-position: -87px -60px;
+}
+/* .search .btn_arw .ico_arr {
+   
+    width: 9px;
+    height: 4px;
+    background-position: -138px -60px;
+} */
+.search .btn_keyboard .ico_keyboard {
+	display: block;
+	width: 19px;
+	height: 11px;
+	background-position: -33px -60px;
+}
+</style>
+</head>
+<style type="text/css" id="_nx_kbd_style"></style>
+<div id="_nx_kbd" style="display: none;"></div>
+<body>
+	<div class="special_bg">
+		<div id="search" class="search">
+			<span class="green_window"> <input id="query" name="query"
+				type="text" title="검색어 입력" maxlength="255" class="input_text"
+				tabindex="1" accesskey="s" style="ime-mode: active;"
+				autocomplete="off" onclick="">
+			</span>
+
+
+			<div id="nautocomplete" class="autocomplete">
+				<a href="javascript:;" role="button" tabindex="2"
+					class="btn_arw _btn_arw fold"><span class="blind _text">자동완성
+						펼치기</span><span class="ico_arr"></span></a> <span class="blind _text">자동완성
+					펼치기</span> <span class="ico_arr"></span>
+			</div>
+
+
+			<button id="search_btn" type="submit" title="검색" tabindex="3"
+				class="sch_smit">
+				<span class="blind">검색</span> <span class="ico_search_submit"></span>
+			</button>
+		</div>
+		<!-- search  -->
+	<!-- special_bg  -->
+		<a href="javascript:;" id="ke_kbd_btn" role="button"
+			class="btn_keyboard" onclick="nx_ime_load(this)" data-clk="sch.ime"><span
+			class="blind">한글 입력기</span><span class="ico_keyboard"></span> <span
+			class="blind">한글 입력기</span> <span class="ico_keyboard"></span> </a>
+		</div>
+</body>
+</html>
