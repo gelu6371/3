@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 1.오후 2:09:31</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+	li{
+	display: inline;
+	}
+	span{
+	display: block;
+	}
+	h1.hidden{
+	/* display: none; */ /* 1. 요소를 숨기는 역할 */
+	visibility:hidden;/* 2. 요소를 사 준다음   */
+	}
+</style>
+<style>
+	.imgbox{
+		text-align: center;
+		width: 120px;
+		border: solid 1px gray;
+		margin: 4px;
+		padding: 6px;
+	}
+	.imgbox img, button{
+		width: 100%;
+	}
+</style>
+</head>
+<body>
+<!-- css display -->
+<!-- 
+
+이벤트 click 발생해서 onclick 이벤트 처리에서
+1. id가 "imgbox1"인 요소를 얻어와서
+   document.getElementById("imgbox1")  
+2. style 속성의 display:none 주는 코딩(style="disp:none")을 
+      자바스크립트로 처리
+   document.getElementById("imgbox1").style.display="none";
+
+ -->  
+<div class="imgbox" id="imgbox1">Box1<br>
+<img src="/webPro/css/images/img_5terre.jpg" alt="" />
+<button onclick='document.getElementById("imgbox1").style.display="none";'>remove</button>
+</div>
+
+<div class="imgbox" id="imgbox2">Box2<br>
+<img src="/webPro/css/images/img_forest.jpg" alt=""/>
+<button onclick="hideElement();">hide</button>
+</div>
+
+<div class="imgbox" id="imgbox3">Box3<br>
+<img src="/webPro/css/images/img_lights.jpg" alt=""/>
+<button onclick="resetAll();">reset all</button>
+</div>
+
+<div style="clear: both"></div>
+
+<script>
+function hideElement(){	/* 자바 스크립트 함수선언 : function 함수명{ return 값}  */
+	document.getElementById("imgbox2").style.visibility="hidden";
+	
+}
+function resetAll(){	/* 자바 스크립트 함수선언 : function 함수명{ return 값}  */
+	document.getElementById("imgbox1").style.display="block"
+	document.getElementById("imgbox2").style.visibility="visible";
+}
+</script>
+
+<!-- display : 요소가 표시되는 지 여부를 설정하는 속성 -->
+<h1 class="hidden">Lorem ipsum dolor sit.</h1>
+<h1>Magni nulla veritatis repellendus.</h1>
+
+<!-- 기본값 : block, inline -->
+<!--
+div                 span
+h1 ~ h2              a    
+p                   img
+from
+li
+-->
+<span>item1</span>
+<span>item2</span>
+<span>item3</span>
+
+<ul>
+	<li>item1</li>
+	<li>item2</li>
+	<li>item3</li>
+	<li>item4</li>
+</ul>
+
+</body>
+</html>

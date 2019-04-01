@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 1.오전 11:29:36</title>
+<link rel="stylesheet" type="text/css" href="">
+<!-- <style>
+ul{
+	list-style-type: circle;
+}
+ol{
+	list-style-type: upper-roman;
+	list-style-image: url("/webPro/css/days03/images/sqpurple.gif");
+}
+</style> -->
+<style>
+li{
+	border: solid 1px gray;
+	text-align: center;
+	border-bottom: none;
+	
+}
+li:last-child{
+	 border-bottom: solid 1px gray; 
+}
+li:hover{
+	color: red;
+	cursor: pointer;
+}
+ul, ol{
+	/* border: solid 1px aqua; */
+	border: solid 1px gray;
+	width: 150px;
+	
+}
+ul.a{
+	list-style-position: inside;
+}
+ol.b{
+	list-style-position: outside;
+	
+	background: #f1f1f1;
+	border-left: solid 5px red;
+	padding: 10px 20px;
+	list-style-type: none;
+}
+.none{
+	/* ul/li 기본 설정 제거 */
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+}
+
+</style>
+</head>
+<body>
+<!-- css lists(목록) -->
+<!-- list style postion 속성 -->
+
+<hr>
+<ul class="a none">
+	<li>Lorem.</li>
+	<li>Nemo.</li>
+	<li >Beatae.</li>
+</ul>
+<ol class="b">
+	<li>Lorem.</li>
+	<li>Eaque!</li>
+	<li >Cupiditate.</li>
+</ol>
+<dl>
+	<dt>Lorem.</dt>
+	<dd>Lorem ipsum dolor sit.</dd>
+	<dt>Explicabo!</dt>
+	<dd>Mollitia eum cupiditate repudiandae!</dd>
+	<dt>Soluta?</dt>
+	<dd>Ullam voluptatem architecto fuga.</dd>
+</dl>
+</body>
+</html>

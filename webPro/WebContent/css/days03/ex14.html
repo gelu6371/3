@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 1.오후 4:19:37</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+h1{
+	background-color: green;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px;
+	color: white;
+	margin: 0;
+}
+#nav{
+	padding: 25px;
+	border: 2px solid aqua;
+	background-color:blue;
+	color:white;
+	
+	/* 사파리 같은 다른 브라우저에서는 position:-webkit-stickyl; 이라고 써야한다.  */
+	position: sticky;
+	top : 0;
+}
+.container {
+	position: relative;
+}
+.container img{
+	width: 100%;
+	height: auto;
+	opacity: 0.3; /* 투명도 0~1 0.1 : 10%  */
+}
+
+.topleft{
+	position:absolute;
+	top:8px;
+	left:16px;
+	font-size: 18px;
+}
+.topright{
+	position:absolute;
+	top:8px;
+	right:16px;
+	font-size: 18px;
+}
+.bottomleft{
+	position:absolute;
+	bottom:8px;
+	left:16px;
+	font-size: 18px;
+}
+.bottomright{
+	position:absolute;
+	bottom:8px;
+	right:16px;
+	font-size: 18px;
+}
+.centermiddle{
+	position:absolute;
+	bottom:50%;
+	right:50%;
+	font-size: 18px;
+	
+}
+
+</style>
+</head>
+<body>
+<h1>top</h1>
+<div id="nav">
+메뉴1 메뉴2 메뉴3 메뉴4
+</div>
+<div id="content" style="padding-bottom: 1000px">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque tenetur perferendis sit quisquam mollitia at fugit molestias praesentium necessitatibus non. Minus voluptates modi nihil dolorum cumque quasi atque eius! Inventore.</p>
+<p>Veritatis quas architecto voluptatem veniam tenetur culpa deleniti quos ratione magnam iste molestiae ipsam quam itaque dolorum quod laborum exercitationem consequuntur quis aperiam nihil dicta quisquam natus. Sunt quas dolores!</p>
+<p>Quae eligendi molestiae vel nemo officiis ad veritatis suscipit fugit deserunt voluptatem quidem consectetur eaque hic quas qui. Sint excepturi velit facilis aut! Ducimus perferendis aliquam error architecto dolorum praesentium?</p>
+<div class="container">
+ <img src="/webPro/css/images/img_5terre_wide.jpg" alt="" />
+ <div class="topleft">topleft</div>
+ <div class="topright">topright</div>
+ <div class="bottomleft">bottomleft</div>
+ <div class="bottomright">bottomright</div>
+ <div class="centermiddle">centermiddle</div>
+</div>
+</div>
+</body>
+</html>
+
+<!--
+ postion:sticky 속성값  : fixed + relative 스크롤과 위치기반 연동
+ -->

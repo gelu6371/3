@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 1.오후 3:04:26</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* 
+div{
+	border: solid 3px #73ad21;
+	margin: 0 auto;
+}
+ */
+div.ex1{
+	width: 500px;
+}
+div.ex2{
+	/* 반응형웹  */
+	max-width: 500px;
+
+}
+</style>
+<style>
+div {
+	width: 150px;
+	height: 100px;
+	border: solid 1px gray;
+}
+div.static{
+	position: static;	/* 정적  */
+	background-color: red;
+	
+	/* static : left, top 설정 적용 X */
+	left: 10px;
+	top: 10px;
+}
+div.relative{
+	position: relative;	/* 상대좌표 : 상대좌표는 기준이 중요한데 기준은 원래 그려져야 할 곳이 기준이다. */
+	background-color: green;
+	left: 10px;
+	top: 10px;
+}
+div.absolute{
+	position: absolute;	/* 절대좌표  */
+	background-color: blue;
+	left: 10px;
+	top: 10px;
+}
+</style>
+</head>
+<body>
+<!-- css layout - position 속성 -->
+
+<div id="box1" class="static">static</div>
+<div id="box2" class="relative">relative</div>
+<div id="box3" class="absolute">absolute</div>
+
+<!-- <hr style="border:solid 1px red;"> -->
+ 
+
+<!-- 
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+
+position 속성을 먼저 설정하지 않으면 left, right, bottom, top 속성 안된다.	
+	
+ -->
+<!-- css layout - max-width와 margin auto -->
+<!-- 
+<div class="ex1">Lorem ipsum dolor sit.</div>
+<div class="ex2">Quas unde obcaecati recusandae.</div> 
+-->
+</body>
+</html>

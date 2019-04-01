@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 1.오전 9:30:58</title>
+<style>
+body{
+	color: blue;
+}
+h1{
+	color:green;
+}
+.box{
+	text-indent:50px; /* 첫번째줄에 들여쓰기 지정  */
+
+	border:solid 1px gray;
+	padding:10px;
+	width: 200px;
+	height: 200px;
+	
+	text-align: justify; /* 양쪽을 맞춰준다.  */
+}
+a{
+	text-decoration: none;
+	direction: ltr;/* 텍스트의 방향 변경 */
+}
+a:hover {
+	text-decoration: underline overline;
+	text-transform: capitalize;
+}
+#demo{
+	letter-spacing:-5px ; /* 문자 사이의 간격  */
+	line-height:1.8 ; /* 줄 사이의 간격  */
+}
+h5{
+	direction: rtl;
+	word-spacing: 10px/* 단어사이이 간격  */
+}
+h2{
+	color:black;
+	text-shadow: 3px 2px gray;
+}
+p.a{
+	white-space: pre; /* 형태 그대로 출력(엔터키 된다.)  */
+}
+p.b{
+	/* white-space: nowrap; 자동 줄바꿈이 되지 않는다.  */
+	white-space: normal; /* 기본 속성값  */
+}
+img {
+	/* vertical-align: text-top; */
+	/* vertical-align: middle; */
+	/* vertical-align: text-bottom; */
+	/* vertical-align: baseline; */
+	/* vertical-align: super; */ /* <super>  */
+	/* vertical-align: sub; */ /* <sub>  */
+	float: left;
+}
+</style>
+</head>
+<body>
+
+<!-- css 텍스트 -->
+<p style="width: 200px">
+<img src="/webPro/css/days02/images/paper.gif" alt="" />
+Lorem ipsum dolor sit amet,
+ consectetur adipisicing elit.
+  Voluptates architecto.
+<hr>
+<p class="a">
+This is sime text.This is sime text.
+This is sime text.This is sime text.
+This is sime text.This is sime text.
+This is sime text.This is sime text.
+</p>
+<p class="b">
+This is sime text.This is sime text.
+This is sime text.This is sime text.
+This is sime text.This is sime text.
+This is sime text.This is sime text.
+</p>
+<hr>
+<h2>Text-Shadow Effect</h2>
+<hr>
+<h5>Lorem ipsum dolor.</h5>
+<hr>
+<a href="www.naver.com">{naver}</a>
+<!-- text-align:justify -->
+<div class="box" id="demo">Lorem ipsum dolor sit amet, consectetur
+ adipisicing elit. Quo magni similique consectetur
+ praesentium accusantium ex impedit a nihil nat
+us placeat assumenda sunt culpa veritatis rem sint inventore mollitia. Cum velit!</div>
+<div class="box">Lorem ipsum dolor sit amet, consectetur
+ adipisicing elit. Quo magni similique consectetur
+ praesentium accusantium ex impedit a nihil nat
+us placeat assumenda sunt culpa veritatis rem sint inventore mollitia. Cum velit!</div>
+<hr>
+<h2 style="text-align: left;">Lorem.</h2>
+<h3 style="text-align: center;">Lorem.</h3>
+<h4 style="text-align: right;">Lorem.</h4>
+<hr>
+
+<h1>Lorem ipsum dolor sit.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+ elit. Molestiae dignissimos voluptatum nisi incidunt adipisci
+  velit neque repellendus tempora ab deserunt.</p>
+</body>
+</html>
