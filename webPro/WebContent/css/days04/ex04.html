@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오전 10:08:58</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+*{
+	box-sizing: border-box;
+}
+.header, .footer{
+	background: grey;
+	color: white;
+	padding: 15px;
+	text-align: center;
+}
+
+.column{
+	float: left;
+	padding: 15px;
+}
+.menu{
+	width: 25%;
+}
+.content{
+	width: 75%;
+}
+
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu ul li{
+	padding: 8px;
+	background: #33b5e5;
+	color: white;
+}
+.menu ul li:hover{
+	background: #0099cc;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Header</h1>
+</div>
+<div class="clearfix">
+ <div class="column menu">
+ <ul>
+ 	<li class="active">Lorem.</li>
+ 	<li>Omnis.</li>
+ 	<li>Laborum.</li>
+ 	<li>Provident.</li>
+ </ul>
+ </div>
+ <div class="column content">
+ <h1>Lorem.</h1>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis vel voluptates aperiam natus itaque nostrum illum accusamus molestias sunt enim ut labore. Labore rerum alias sit ducimus quis hic cum.</p>
+ <p>Sint iusto officiis recusandae illum sed minus ex eos ut unde maiores explicabo tempora numquam eum rem delectus a placeat architecto accusamus quasi provident voluptas neque debitis ipsum dolore quidem.</p>
+ </div>
+</div>
+<div class="footer">
+<h1>Footer</h1>
+</div>
+</body>
+</html>

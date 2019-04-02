@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오전 9:27:02</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/*  
+div{
+	border: solid 3px #ddd;
+	padding: 5px;
+}
+
+img{
+	float: right;
+	
+}
+.clearfix{
+	overflow: auto;
+}
+  */
+
+</style>
+
+<style>
+/* 
+div{
+	border: 3px solid green;
+	padding: 5px;
+}
+img{
+	float: right;
+}
+.clearfix::after{
+	 content: "after"; 
+	content:"";
+	clear: both;
+	display: table;
+}
+  */
+</style>
+
+<style>
+* {
+	box-sizing: border-box;
+}
+
+.box {
+	width: 33.33%;
+	padding: 50px;
+	float: left;
+	
+}
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* images side by side; */
+.img-container{
+	float: left;
+	
+	width: 33%; /* 뒤에 border같은 여백이 있기 때문에 33% 아니면 적용이 안된다.  */
+	padding: 5px;
+	border: solid 1px #ddd;
+	border-radius: 5px;
+	margin: 1px;
+}
+</style>
+</head>
+<body>
+<div class="clearfix">
+<h3>PineApple</h3>
+<img src="/webPro/css/images/pineapple.jpg" alt="" style="width: 170px;height: 170px;"/>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dignissimos commodi possimus iusto nulla quas itaque deleniti iste deserunt rem!
+</div>//
+
+<h3>Grid of Boxes</h3>
+<div class="clearfix" style="border: solid 3px red;">
+<div class="box" style="background: #bbb">
+	<p>Lorem.</p>
+</div>
+<div class="box"  style="background: #ccc">
+	<p>Earum.</p>
+</div>
+<div class="box"  style="background: #ddd">
+	<p>Cupiditate!</p>
+</div>
+</div>
+<h3>images Side by Side</h3>
+<div class="clearfix">
+	<div class="img-container"><img src="/webPro/css/images/img_5terre.jpg" alt="" style="width: 100%;"/></div>
+	<div class="img-container"><img src="/webPro/css/images/img_forest.jpg" alt="" style="width: 100%;" /></div>
+	<div class="img-container"><img src="/webPro/css/images/img_mountains.jpg" alt="" style="width: 100%;"/></div>
+</div>
+</body>
+</html>

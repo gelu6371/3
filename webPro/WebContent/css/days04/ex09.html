@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오후 12:02:09</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* selector:pseduo-class  */
+/* 
+a:link{
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+  */
+a{
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+	background: green;
+	color: white;
+}
+a:hover#in{
+	background: blue;
+}
+a + div#in{
+	width: 200px;
+	padding: 10px;
+	background: aqua;
+	text-align: center;
+	display: none;
+}
+#out:hover #in{ /* out에 마우스를 올릴때 in에 일어날 행동  */
+	display: block;
+}
+p:first-child {
+	background: yellow;
+}
+p:last-child {
+	background: red;
+}
+/* div:first-child i{ */
+div i:first-child, div i:last-child{
+	background: green;
+}
+</style>
+</head>
+<body>
+<!-- 가짜 클래스(pseudo class) -->
+<div>
+ Lorem ipsum <i>dolor</i> sit amet, <i>consectetur</i> <i>adipisicing</i> elit. 
+ Suscipit quasi.
+</div>
+<p style="width: 300px;border: solid 1px gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In cupiditate non dolor nemo beatae ad hic minus aliquid quisquam totam pariatur amet deleniti iusto. Animi laboriosam atque eligendi enim ea.</p>
+<p style="width: 300px;border: solid 1px gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In cupiditate non dolor nemo beatae ad hic minus aliquid quisquam totam pariatur amet deleniti iusto. Animi laboriosam atque eligendi enim ea.</p>
+<p style="width: 300px;border: solid 1px gray;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In cupiditate non dolor nemo beatae ad hic minus aliquid quisquam totam pariatur amet deleniti iusto. Animi laboriosam atque eligendi enim ea.</p>
+<!-- 형식 : selector:pseduo-class -->
+<!-- 
+1. 사용자가 마우스를 올리면 요소의 스타일 지정
+2. a 방문한적이 있는 경우, 없는 경우, 스타일 지정
+3. 요소가 포커스를 가지면 스타일 지정
+  -->
+<!--  
+<div id="out">
+<a href="#">Mouse over Me</a>
+ <div id="in">
+  테스트
+ </div>
+</div>
+-->
+</body>
+</html>

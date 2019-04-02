@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오전 11:15:03</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+p{
+	border: solid 1px gray;
+}
+div p{ /* div 후손 p   */
+	background: yellow;
+}
+div > p{ /* div 직계자식 p만  */
+	font-size: 20px;
+	color: red;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+div + p{ /* div와 인접한 바로 다음 요소 p 예를 들어 p 전에 span이나 다른게 있으면 안 찾아진다.  */
+	border-width: 10px;
+	border-style: dotted;
+	border-color: red;
+}
+div ~ p{ /* div와 다음 모든 형제레벨의 p */
+	border-width: 10px;
+	border-style: dotted;
+	border-color: red;
+}
+</style>
+</head>
+<body>
+<!-- css 결합자 : selector selector 결합 -->
+<p>Lorem ipsum dolor.</p>
+<p>Lorem ipsum dolor.</p>
+<div>
+	<p>Lorem ipsum dolor.</p>
+	<p>Eveniet similique debitis.</p>
+	<span>
+		<p>Lorem ipsum dolor.</p>
+	</span>
+</div>
+<span>XXXX</span>
+<p>Lorem ipsum dolor.</p>
+<p>Minima beatae expedita!</p>
+</body>
+</html>

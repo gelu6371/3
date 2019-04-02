@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오후 2:02:07</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+p{
+	width: 400px;
+	border: solid 1px #ddd;
+	padding: 5px;
+	text-align: justify;
+}
+p::first-letter { /* p 텏트의 첫번째 문자(글자)의 서식 지정 */
+	color: red;
+	font-size: xx-large;
+}
+p::first-line {
+	color: blue;
+	font-size: xx-small;
+}
+h1::before{ /* 요소의 내용 이전에 일부 내용을 삽입할 수 있다.  */
+	content: url("/webPro/css/images/smiley.gif");
+}
+h1::after { /* 요소의 내용 이후에 일부 내용을 삽입할 수 있다. */
+	content: "~~~~~~~";
+	color:red;
+}
+p::selection{
+	color: red;
+	background: yellow;
+}
+p::-moz-selection{ /* firefox에서는 이 코딩으로 써야한다.  */
+	color: red;
+	background: yellow;
+}
+</style>
+</head>
+<body>
+<!-- 가상클래스 :: 가상요소 -->
+<h1>Lorem ipsum dolor sit amet.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptates vel commodi quas esse maxime magni cum cumque porro facilis. Minus ex minima dolorem ut accusamus quod recusandae ab fugiat!</p>
+</body>
+</html>

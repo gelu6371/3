@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오후 4:30:28</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+img{
+	width: 44px;
+	height: 44px;	
+}
+img#home{
+	background: url("/webPro/css/images/img_navsprites_hover.gif") 0 0;
+}
+img#home:hover{
+	background: url("/webPro/css/images/img_navsprites_hover.gif") 0 -46px;
+}
+img#right{
+	background: url("/webPro/css/images/img_navsprites_hover.gif") -90px 0;
+}
+img#left{
+	background: url("/webPro/css/images/img_navsprites_hover.gif") -46px -46px;
+}
+</style>
+</head>
+<body>
+<!-- image 스프라이트(sprites) -->
+<!-- 웹페이지에 필요한 이미지를 단일 이미지 하나로 서버에서 가져와서 브라우저에서 잘라서 사용하겠다. -->
+<img src="/webPro/css/images/img_navsprites_hover.gif" alt="" />
+<hr>
+
+<hr>
+<img width="1" height="1" id="home" alt="" src="">
+<img width="1" height="1" id="left" alt="" src="">
+<img width="1" height="1" id="right" alt="" src="">
+</body>
+</html>

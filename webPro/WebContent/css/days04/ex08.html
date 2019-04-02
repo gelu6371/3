@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오전 11:30:51</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+p.flip, div.panel{
+	font-size: 16px;
+	padding: 10px;
+	text-align: center;
+	background: #3caf50;
+	color: white;
+	border: solid 1px #a6d8a8;
+	width: 300px;
+}
+p{
+	margin: 0;
+	cursor: pointer;
+
+}
+div.panel{
+	display: none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ function flip_click() {
+	/* window.alert("경고창 확인"); */
+	var pnl = document.getElementById("pnl1");
+	pnl.style.display = "block";
+}
+</script>
+</head>
+<body>
+<p class="flip">Click Panel</p>
+<div id="pnl1" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quae atque rerum expedita obcaecati ipsum suscipit minima praesentium laudantium doloribus aliquam aut incidunt animi inventore eaque? Ea reprehenderit debitis magni.</p>
+	<p>Accusantium ratione earum eligendi officiis animi laudantium rem quaerat laboriosam possimus saepe eaque libero dignissimos pariatur aperiam maxime quod minus aspernatur error qui perspiciatis necessitatibus nostrum ipsum atque alias distinctio.</p>
+	<p>Sapiente porro excepturi distinctio iure libero tempora quaerat necessitatibus accusamus temporibus animi labore aut facilis unde nobis vel possimus deleniti iste iusto provident ea vero. Facere eius sed possimus eum.</p>
+</div>
+<p class="flip">Click Panel</p>
+<div id="pnl2" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quae atque rerum expedita obcaecati ipsum suscipit minima praesentium laudantium doloribus aliquam aut incidunt animi inventore eaque? Ea reprehenderit debitis magni.</p>
+	<p>Accusantium ratione earum eligendi officiis animi laudantium rem quaerat laboriosam possimus saepe eaque libero dignissimos pariatur aperiam maxime quod minus aspernatur error qui perspiciatis necessitatibus nostrum ipsum atque alias distinctio.</p>
+	<p>Sapiente porro excepturi distinctio iure libero tempora quaerat necessitatibus accusamus temporibus animi labore aut facilis unde nobis vel possimus deleniti iste iusto provident ea vero. Facere eius sed possimus eum.</p>
+</div>
+<p class="flip">Click Panel</p>
+<div id="pnl3" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quae atque rerum expedita obcaecati ipsum suscipit minima praesentium laudantium doloribus aliquam aut incidunt animi inventore eaque? Ea reprehenderit debitis magni.</p>
+	<p>Accusantium ratione earum eligendi officiis animi laudantium rem quaerat laboriosam possimus saepe eaque libero dignissimos pariatur aperiam maxime quod minus aspernatur error qui perspiciatis necessitatibus nostrum ipsum atque alias distinctio.</p>
+	<p>Sapiente porro excepturi distinctio iure libero tempora quaerat necessitatibus accusamus temporibus animi labore aut facilis unde nobis vel possimus deleniti iste iusto provident ea vero. Facere eius sed possimus eum.</p>
+</div>
+<p class="flip">Click Panel</p>
+<div id="pnl4" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quae atque rerum expedita obcaecati ipsum suscipit minima praesentium laudantium doloribus aliquam aut incidunt animi inventore eaque? Ea reprehenderit debitis magni.</p>
+	<p>Accusantium ratione earum eligendi officiis animi laudantium rem quaerat laboriosam possimus saepe eaque libero dignissimos pariatur aperiam maxime quod minus aspernatur error qui perspiciatis necessitatibus nostrum ipsum atque alias distinctio.</p>
+	<p>Sapiente porro excepturi distinctio iure libero tempora quaerat necessitatibus accusamus temporibus animi labore aut facilis unde nobis vel possimus deleniti iste iusto provident ea vero. Facere eius sed possimus eum.</p>
+</div>
+<p class="flip">Click Panel</p>
+<div id="pnl5" class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quae atque rerum expedita obcaecati ipsum suscipit minima praesentium laudantium doloribus aliquam aut incidunt animi inventore eaque? Ea reprehenderit debitis magni.</p>
+	<p>Accusantium ratione earum eligendi officiis animi laudantium rem quaerat laboriosam possimus saepe eaque libero dignissimos pariatur aperiam maxime quod minus aspernatur error qui perspiciatis necessitatibus nostrum ipsum atque alias distinctio.</p>
+	<p>Sapiente porro excepturi distinctio iure libero tempora quaerat necessitatibus accusamus temporibus animi labore aut facilis unde nobis vel possimus deleniti iste iusto provident ea vero. Facere eius sed possimus eum.</p>
+</div>
+
+<script>
+/* 
+$('.flip').click(flip_click);
+자바 객체 : Student s1 = new Student();
+jquery 객체 : $()
+ */
+ $('.flip').click( function() {
+	/* window.alert("경고창"); */ 
+	$(this).next().slideToggle(); /* $(this) :  클릭된 p태그  */
+ });
+</script>
+
+</body>
+</html>

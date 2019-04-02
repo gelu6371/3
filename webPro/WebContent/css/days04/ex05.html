@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 2.오전 10:21:33</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+.center{
+	width: 60%;
+	border: solid 3px gray;
+	margin: auto;
+	text-align: center;
+}
+
+img{
+/* 이미지는 inline모드라 margin, padding 안되기 때문에 block모드로 바꿔줘야한다.  */
+	display: block;
+	margin: auto;
+}
+
+.right{
+	position: absolute;
+	right: 0px;
+	width: 300px;
+	border: solid 3px gray;
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+<!-- css layout - 수평 또는 수직 정렬 -->
+<div class="center">
+ <p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<h3>image center</h3>
+<img src="/webPro/css/images/paris.jpg" alt="" style="width: 40%;" />
+
+<h3>좌우로 정렬 - position 또는 float</h3>
+<div class="right">
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit placeat.</p>
+</div>
+
+
+<!-- 
+display:inline
+display:block
+display:none
+display:table
+
+display:[inline-block]모드 = inline + 너비, 높이 설정 X
+                                                                        패딩, 여백
+  -->
+</body>
+</html>
