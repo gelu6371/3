@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 3.오전 10:14:48</title>
+<!-- 부트스트랩(bootstrap)  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+input[type="text"]{
+	width: 130px;
+	box-sizing: border-box; /* width, padding 을 주면 총너비를 맨 처음에 정했어도 그만큼 늘어나는데 box-sizing: border-box주면 padding 줘도 맨 처음 정한 너비값 고정된다.  */
+	border: solid 2px #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	
+	background-color: white;
+	background-image: url("/webPro/css/images/searchicon.png");
+	background-repeat: no-repeat;
+	background-position: left; /* 10px 10px; */ /* 50% 50%; */
+	padding: 12px 20px 12px 40px;
+	
+	/* CSS3 2D, 3D효과 */
+	/* 전환  */
+	transition:width 10s; /* width 속성 값이 바뀔때 1초동안 전환  */
+	/* -webkit-transition:width 1s; */ /* 다른 브라우저에서는 이 코딩으로 해야 한다.  */
+}
+
+textarea{
+	width: 100%;
+	height: 150px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: solid 2px #ccc;
+	background-color: #f8f8f8;
+	font-size: 16px;
+	padding: 12px 20px;
+	
+	resize: none; /* 크기 조절 못하게 하겠다.  */
+}
+
+* {
+	box-sizing: border-box;
+
+}
+
+input[type="text"]:focus{ /* 마우스로 클릭하면  */
+	width: 100%;
+}
+
+.button{
+	background-color: #4caf50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.circlebutton{
+	border-radius: 15px;
+}
+
+</style>
+</head>
+<body>
+<!-- 부트스트랩 테이블 -->
+<table class="table table-hover" style="width: 500px; text-align: center; margin: 0 auto;">
+	<thead class="thead-dark">
+	<tr>
+		<th>Lorem.</th>
+		<th>Soluta.</th>
+		<th>Minima!</th>
+		<th>Commodi.</th>
+		<th>Vero.</th>
+	</tr>
+	</thead>
+	<tr>
+		<td>Lorem.</td>
+		<td>Laborum.</td>
+		<td>Minima?</td>
+		<td>Quia!</td>
+		<td>Beatae.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Odio.</td>
+		<td>Ut.</td>
+		<td>In.</td>
+		<td>Nemo!</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Eveniet.</td>
+		<td>Voluptate!</td>
+		<td>Earum.</td>
+		<td>Iure!</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Illum.</td>
+		<td>Fugiat?</td>
+		<td>Eveniet.</td>
+		<td>Distinctio!</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Iusto.</td>
+		<td>Quo.</td>
+		<td>Est!</td>
+		<td>Voluptas.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Maiores.</td>
+		<td>Hic.</td>
+		<td>Quam!</td>
+		<td>Fugiat.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Provident.</td>
+		<td>Repellendus.</td>
+		<td>Veritatis!</td>
+		<td>Est.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Numquam?</td>
+		<td>Deleniti.</td>
+		<td>Adipisci.</td>
+		<td>Nemo.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Ad!</td>
+		<td>Nobis!</td>
+		<td>Obcaecati.</td>
+		<td>Nemo.</td>
+	</tr>
+</table>
+<!-- css form( 입력 양식 ) -->
+<form action="">
+ <input type="text" name="search"  id="search" autocomplete="off" placeholder="Search..."/>
+ <br><br>
+ <textarea>
+  Lorem ipsum dolor.
+ </textarea>
+ <br><br>
+ <input type="button" class="button circlebutton" value="Button"/>
+ <input type="reset" class="button" value="Reset"/>
+ <input type="submit" class="button" value="Submit"/>
+ <span class="button">button</span>
+ <a href="#" class="button">button</a>
+ <button type="button" class="button">button</button>
+ 
+ <br><br>
+ <input type="button" class="btn-info active" value="Button"/>
+ <input type="reset" class="btn-info disabled" value="Reset"/>
+ <input type="submit" class="btn-info" value="Submit"/>
+ <span class="btn-info">button</span>
+ <a href="#" class="btn-info">button</a>
+ <button type="button" class="btn-info">button</button>
+ 
+ 
+ </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 3.오후 3:21:51</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+#demo{
+	padding: 15px;
+	background-image: url("/webPro/css/images/img_flwr.gif"), url("/webPro/css/images/paper.gif");
+	background-position: right bottom , left top ;
+	background-repeat: no-repeat, repeat ;
+	
+	
+}
+</style>
+
+<style>
+p{
+	width: 200px;
+	height: 150px;
+	border: solid 1px #ddd;
+	background-image: url("/webPro/css/images/img_flwr.gif");
+	background-size: 100px 80px;
+	background-repeat: no-repeat;
+	
+	
+}
+#box2{
+	background-image: url("/webPro/css/images/img_flwr.gif"); 
+	background-size: contain; /* 늘릴수 있는 만큼 가로, 세로 늘리겠다.  */
+}
+#box3{
+	background-image: url("/webPro/css/images/img_flwr.gif");
+	background-size: cover; /* 200*100 영역을 완전히 배경  */
+}
+
+</style>
+
+<style>
+/* 현재 페이지의 배경이미지 전체 채우기 작업 */
+html{
+	background: url("/webPro/css/images/img_man.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+</style>
+
+</head>
+<body>
+<!-- css background-size 속성 -->
+<p id="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ab?</p>
+<p id="box2">Quis nihil hic inventore id labore harum cumque velit voluptas.</p>
+<p id="box3">Ad culpa facere eius eligendi possimus velit soluta adipisci perspiciatis?</p>
+
+<hr>
+<!-- css 다중 배경 -->
+<div id="demo"><h2>Lorem ipsum dolor sit amet</h2>, consectetur adipisicing elit. Fugit deserunt quis dolores placeat perspiciatis ullam nulla veritatis quidem eaque corporis harum ipsum doloremque facilis nostrum incidunt laudantium officia cupiditate adipisci.</div>
+</body>
+</html>

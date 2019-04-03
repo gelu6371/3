@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 3.오후 3:45:26</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* background-origin 속성 */
+div{
+	border: solid 15px black;
+	padding: 35px;
+	background-image: url("/webPro/css/images/img_flwr.gif");
+	background-repeat: no-repeat;
+}
+</style>
+
+<style>
+/* background-origin : 배경이미지 위치 설정  */
+#box1{background-origin: padding-box;} /* (기본값)패딩 왼쪽상단  */
+#box2{background-origin: border-box;} /* 보더 왼쪽상단  */
+#box3{background-origin: content-box;} /* 내용 왼쪽상단  */
+</style>
+
+<style>
+/* background-clip */
+span{
+	border: dotted 15px black;
+	padding: 35px;
+	background-color: yellow;
+	display: block;
+	margin: 10px;
+}
+#demo1{
+	background-clip: border-box;
+}
+#demo2{
+	background-clip: content-box;
+}
+#demo3{
+	background-clip: padding-box;
+}
+</style>
+</head>
+<body>
+<span id="demo1">
+	<h1>Lorem.</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos atque!
+</span>
+<span id="demo2">
+	<h1>Modi?</h1>Tempore voluptates facilis sint sed natus velit eligendi at quam.
+</span>
+<span id="demo3">
+	<h1>Nobis!</h1>Quam error natus eum ipsam aut officia illo voluptates velit.
+</span>
+<hr>
+<div id="box1"><h1>Lorem</h1> ipsum dolor sit amet, consectetur adipisicing elit. Atque autem eaque voluptas officiis enim totam dolorem natus perspiciatis iusto doloribus amet aut facilis nobis veniam nihil reiciendis iure in aspernatur!</div>
+<br>
+<div id="box2"><h1>Doloribus</h1> rerum illo qui tempora quo eos quibusdam numquam distinctio delectus consequuntur suscipit repellat maiores sed at ipsam nulla fugiat aliquam aspernatur est cum velit vitae iure culpa soluta eaque!</div>
+<br>
+<div id="box3"><h1>Tempora</h1> nulla rerum asperiores voluptates in accusantium commodi omnis possimus beatae voluptas corrupti saepe cum perferendis. Quibusdam beatae id est eum delectus quas rerum maiores voluptatibus sint placeat libero incidunt.</div>
+</body>
+</html>

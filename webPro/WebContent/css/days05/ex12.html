@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 3.오후 4:12:49</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+#demo{
+	width: 100%;
+	height: 200px;
+	
+	/* background-image: url(); */
+	
+	/* 선형 그라디언트 */
+	/* linear-gradient(방향, 색1, 색2, ...)  */
+	/* background-image: linear-gradient(red, yellow); 기본 방향은 top부터 bottom으로 */
+	/* background-image: linear-gradient(to right, red, yellow);  오른쪽으로 색 변화  */
+	/* background-image: linear-gradient(to bottom right, red, yellow);  대각선 오른쪽으로 변화  */
+	/* background-image: linear-gradient(90deg, red, yellow);  deg : 각도   */
+	/* background-image: linear-gradient(red, yellow, green, blue); */
+	background-image: linear-gradient(90deg, rgba(0,255,0,0), rgba(0,255,0,1));
+}
+</style>
+
+<style>
+#box{
+	width: 200px;
+	height: 200px;
+	/* 방사형 그라디언트  */
+	/* radial-gradient(원점, 원점, 색, 색, ...)  */
+	background-color:red; /* 브라우저 특성상 그라디언트 효과가 적용 안되면 단일색이라도 주려고   */
+	/* background-image: radial-gradient(red,green,blue); */
+	/* background-image: radial-gradient(red 50%,green 30%,blue 20%); */
+	
+	/* 원형 모양의 방사형  */
+	background-image: radial-gradient(red,green,blue);
+}
+</style>
+</head>
+<body>
+<!-- css 그라디언트 효과 -->
+<div id="demo"></div>
+<div id="box"></div>
+</body>
+</html>

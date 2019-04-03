@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 3.오후 2:29:36</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+h1{
+	background-color: red;
+}
+
+/* 요소명#아이디명 우선순위 > 아이디명 우선순위 > 요소명.클래스명 우선순위 > 클래스명 우선순위 > 태그명 우선순위  */
+div#box{
+	background-color: olive;
+}
+
+/* 아이디명 우선순위 > 요소명.클래스명 우선순위 > 클래스명 우선순위 > 태그명 우선순위  */
+#box{
+	background-color: maroon;
+}
+/* 요소명.클래스명 우선순위 > 클래스명 우선순위 > 태그명 우선순위  */
+div.test{
+	background-color: aqua; 
+}
+
+/* 클래스명 우선순위 > 태그명 우선순위  */
+.test{
+	background-color: green;
+}
+
+div{
+	background-color: red;
+}
+h1,h2,h3,h4,h5,h6{
+	background-color: blue;
+}
+</style>
+</head>
+<body>
+<!-- css 단위 -->
+
+<!-- width, margin, padding, font-size 등등 -->
+<!-- 20px 숫자 사이에 공백 있으면 안된다. -->
+<!-- css 뒤에 단위 꼭 붙여준다. 예외) 값이 0일때 -->
+<!-- 음수 값 사용 가능 -->
+<!-- 
+절대길이
+   cm
+   mm
+   inch( 1 inch = 2.54cm = 96px)
+   pt(points) 1pt = 1/72inch
+   pc(picas) 1pc = 12pt
+상대길이
+   em
+   ex
+   vw
+   ch
+   vh
+   vmin
+   vmax
+   %
+   px
+ -->
+ 
+ <!-- css 특이성(우선 순위) -->
+<h1>Lorem ipsum dolor sit amet.</h1>
+ <!-- 인라인 방식 우선순위 > 요소명#아이디명 우선순위 > 아이디명 우선순위 > 요소명.클래스명 우선순위 > 클래스명 우선순위 > 태그명 우선순위 -->  
+<div id="box" class="test" style="background-color: red">Lorem ipsum dolor sit amet.</div>
+</body>
+</html>
