@@ -3,6 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>2019. 4. 3.오후 4:40:38</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	 var d = new Date();
+	 var year = d.getFullYear();
+	 var month =  d.getMonth() + 1;
+	 var date = d.getDate();
+	$(".card>.header>h1").text(date);
+	$(".card>.container>p").text(
+		year + "년" + " " + month + "월"		
+	);
+});
+ /* 웹 페이지 요청한 브라우저에게 응답을 할 때 javascript 사용해서 현재 시스템의 날짜 정보를 얻어와서 출력 */
+ 
+ </script>
 <link rel="stylesheet" type="text/css" href="">
 <style>
 div.card{
@@ -21,6 +36,7 @@ div.container{
 }
 </style>
 </head>
+
 <body>
 <div class="card">
 	<div class="header">
@@ -30,5 +46,6 @@ div.container{
 		<p>2019년 4월</p>
 	</div>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 4.오후 2:38:40</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+.tooltip{
+	position: relative;
+	display: inline-block;
+	border-bottom: dotted 1px black;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left:50%;
+	margin-left: -60px;
+	
+	
+}
+.tooltip .tooltiptext::after{
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color:  black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+</style>
+</head>
+<body>
+<!-- 툴팁(ToolTip) 구현 -->
+<!-- 툴팁 : 요소 위에 마우스 포인터를 올리면 그 요소의 추가적인 설명 정보 보여지게 하는 것. -->
+
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div class="tooltip">Hover over me
+ <span class="tooltiptext">Tooltip Text</span>
+</div>
+</body>
+</html>

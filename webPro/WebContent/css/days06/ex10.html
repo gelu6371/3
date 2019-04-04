@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 4.오후 2:00:59</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+div{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	
+	transition-property:width;
+	transition-duration:2s;
+	transition-timing-function:liner;
+	transition-delay:1s;
+	
+	
+	
+}
+div:hover{
+	width: 300px;
+	
+}
+</style>
+
+<!-- css 애니메이션 -->
+<style>
+p{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	position:relative;
+	
+	animation-name:example;
+	animation-duration:4s;
+	
+	-webkit-animation-name:example03;
+	-webkit-animation-duration:4s;
+	animation-delay:2s;
+	animation-iteration-count:3; /* 애니메이션 3번 반복하라 . 무한반복은 infinite */ 
+	/* animation0direction:reverse; */
+	
+	-webkit-animation-name:example03;
+	-webkit-animation-duration:4s;
+	-webkit-animation-delay:2s; 
+	-webkit-animation-iteration-count:3;
+	/* -webkit-animation0direction:reverse; 방향 거꾸로.*/ 
+}
+
+@keyframes example{
+	from {
+		background-color:green;
+	}
+	to   {
+		background-color: red;
+	}
+}
+
+@keyframes example02{
+	0% {background-color:green;}
+	25% {background-color:red;}
+	50% {background-color:yellow;}
+	75% {background-color:blue;}
+	100% {background-color:aqua;}
+}
+
+@keyframes example03{
+	0% {background-color:green; left:0px; top:0px;}
+	25% {background-color:red; left:200px; top:0px;}
+	50% {background-color:yellow; left:200px; top:200px; }
+	75% {background-color:blue; left:0px; top:200px;}
+	100% {background-color:aqua; left:0px; top:0px;}
+}
+
+</style>
+</head>
+<body>
+<!-- css animation(애니메이션) -->
+<!-- 
+1. 요소가 A 스타일에서 B 스타일로 점진적으로 변경.
+2. 원하는 만큼의 css 속성을 변경.
+3. ㄱ. 키프레임을 먼저 지정 - @keyframes 규칙
+      ㄴ. 각각의 키프레임은 특정 시간에 요소의 스타일을 유지함.
+ 
+-->
+<p></p>
+<hr>
+<div></div>
+</body>
+</html>

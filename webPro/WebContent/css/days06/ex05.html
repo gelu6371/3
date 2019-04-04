@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 4.오전 10:43:51</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+ div{
+ 	width:300px;
+ 	height: 100px;
+ 	border: solid 1px black;
+ 	background-color: yellow;
+ 	
+ 	/* 변환: 위치변환 */
+ 	/* 
+ 	transform:translate(50px, 100px);	
+ 	-ms-transform:translate(50px, 100px);
+ 	-webkit-transform:translate(50px, 100px); */
+ 	
+ 	/* 변환 : 시계 방향으로 20도 회전  */
+ 	/*             중심 기준으로  */
+ 	 
+ 	transform:rotate(20deg);
+ 	-ms-transform:rotate(20deg);
+ 	-webkit-transform:rotate(20deg);
+ 	 transform-origin:0 0; /* 왼쪽 모서리 위쪽 기준으로 회전  */
+ 	 
+ 	 /* 변환 : 크기를 늘리거나 줄이기  */
+ 	/* transform:scale(2,3); */ /* 너비(2배), 높이(3배)  */
+ 	/* 
+ 	-ms-transform:scale(2,3);
+ 	-webkit-transform:scale(2,3); */
+ 	
+ 	/* 변환 : X축 기울, Y축 기울 skewX(몇도), skewY(몇도)  */
+ 	/* 
+ 	transform:skewX(20deg);
+ 	-ms-transform:skewX(20deg);
+ 	-webkit-transform:skewX(20deg);
+ 	 */
+ 	 
+ 	 /* 
+ 	 transform:skewY(20deg);
+ 	 -ms-transform:skewY(20deg);
+ 	 -webkit-transform:skewY(20deg);
+ 	   */
+ 	 /*   
+ 	 transform:skew(20deg,20deg);
+ 	 -ms-transform:skew(20deg,20deg);
+ 	 -webkit-transform:skew(20deg,20deg);
+ 	  */
+ 	 
+ 	 /* matrix(6개 인자  -->  회전, 크기, 이동 병합) 메서드 */
+ 	 /* 
+ 	 matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) 인자 주는 순서 맞춰야한다.
+ 	  */
+ 	 /*  
+ 	 transform:matrix(1, -0.3, 0, 1, 0, 0);
+ 	 -ms-transform:matrix(1, -0.3, 0, 1, 0, 0);
+ 	 -webkit-transform:matrix(1, -0.3, 0, 1, 0, 0);
+ 	  */	
+ }
+</style>
+</head>
+<body>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<!-- translate() 사용해서 위치 이동 -->
+<div>Lorem ipsum dolor sit amet.</div>
+</body>
+</html>
+
+<!-- css 변환(transforms) -->
+<!-- 변환 : 회전, 크기 조절, 기울어지게 등등의 요소 변환 -->
+<!-- 2D, 3D 변환 -->
+<!-- 2D 변환을 위해 브라우저가 지원 버젼 -->
+<!-- 
+IE : -ms-
+firefox : -moz-
+
+opera : -webkit-
+safari : -webkit-
+crom : -webkit-
+
+translate()
+rotate()
+scale()
+skewX() skewY()
+matrix()
+  -->

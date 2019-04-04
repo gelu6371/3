@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 4.오후 12:17:38</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+div{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin: 2px;
+	/* 
+	transition:width 2s;
+	-ms-transition:width 2s;
+	-webkit-transition:width 2s;
+	  */
+	 transition:width 2s, height 4s, 2s;
+	-ms-transition:width 2s, height 4s, 2s;
+	-webkit-transition:width 2s, height, 2s;
+	
+	display: inline-block;
+	
+	/* 전환될때 속도 곡선 지정  */
+	transition-timing-function:linear;
+	-ms-transition-timing-function:linear;
+	-webkit-transition-timing-function:linear;
+	/* 
+	transition-timing-function:ease;
+	transition-timing-function:ease-in;
+	transition-timing-function:ease-out;
+	transition-timing-function:; */
+	
+}
+
+div:hover{
+	/* width: 100%; */
+	width: 150px;
+	height: 150px;
+	transform:rotate(360deg);
+}
+</style>
+</head>
+<body>
+<!-- trans form 변형 -->
+<!-- transition 전환(전이) -->
+<!-- 요소의 속성값을 변경될 때 일정기간동안 A -> B 부드럽게 변경하는 속성 -->
+<!-- 
+1. 속성
+2. 효과 지속 시간
+-->
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
