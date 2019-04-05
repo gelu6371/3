@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 5.오후 2:14:08</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+:first-child {
+	border: solid 2px red;
+}
+
+p:first-of-type {
+	border: solid 2px red;
+}
+
+:last-child {
+	border: solid 2px  blue;
+}
+
+#demo{
+	width: 300px;
+	border: solid 1px gray;
+}
+#demo:first-letter {
+	font-size: 50px;
+	color: red;
+}
+#demo:first-line {
+	text-decoration: line-through;
+}
+input[type=text]:focus{
+	background: red;
+}
+</style>
+<style>
+input:in-range{
+	background: red;
+}
+</style>
+<style>
+input:invalid{
+	border: solid 2px red;
+}
+</style>
+<style>
+:not(p){
+	border: solid 1px blue;
+}
+</style>
+</head>
+<body>
+<form>
+	email :
+	<input type="email" />
+	<br>
+	정수: :
+	<input type="number" min="1" max="10" value="5">
+	<input type="submit" value="send" />
+</form>
+<hr>
+<input autofocus="autofocus" type="text"/>
+<div id="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa odit doloribus dolor dicta dignissimos deleniti delectus laudantium neque quo aliquid commodi labore consequatur inventore quam iste officia recusandae obcaecati sapiente?
+</div>
+<hr>
+
+<table border="1">
+ <tr>
+ 	<th>Lorem.</th>
+ 	<th>Impedit?</th>
+ 	<th>Quae.</th>
+ </tr>
+ <tr>
+ 	<td>Lorem.</td>
+ 	<td>Eius.</td>
+ 	<td>Deleniti!</td>
+ </tr>
+ <tr>
+ 	<td>Lorem.</td>
+ 	<td>Quod.</td>
+ 	<td>Voluptatum.</td>
+ </tr>
+ <tr>
+ 	<td>Lorem.</td>
+ 	<td>Voluptas!</td>
+ 	<td>Quidem!</td>
+ </tr>
+ <tr>
+ 	<td>Lorem.</td>
+ 	<td>Aperiam.</td>
+ 	<td>Voluptates.</td>
+ </tr>
+ <tr>
+ 	<td>Lorem.</td>
+ 	<td>Aut.</td>
+ 	<td>Dolores?</td>
+ </tr>
+</table>
+<hr>
+<p>1 Lorem ipsum.</p>
+<div>
+	<div>=div box=</div>
+	<p>div 1. Lorem.</p>
+	<p>div 2. Voluptatibus.</p>
+	<p>div 3. Perferendis.</p>
+</div>
+<p>2 Deleniti qui.</p>
+<p>3 Ipsam dolorum.</p>
+</body>
+</html>

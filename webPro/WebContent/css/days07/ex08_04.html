@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 5.오후 3:08:19</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* p:nth-child(3) { */
+/* p:nth-of-type(3) {	
+	background-color: red;
+} */
+
+/* p:nth-last-child(1) { */
+/* p:nth-last-of-type(1) {
+	background-color: blue;
+} */
+</style>
+<style>
+.box{
+	border: solid 2px green;
+}
+/* p:only-of-type{ */
+p:only-child{
+	background-color: aqua;
+}
+</style>
+<style>
+input:optional:not([type=submit]){
+	border:solid 3px aqua;
+}
+::placeholder{
+	color: red;
+}
+input:read-only{
+	background-color: black;
+}
+
+div::selection{
+	background: yellow;
+	color: red;
+}
+
+</style>
+</head>
+<body>
+<form action="">
+id : <input type="text" required="required"/><br>
+pwd : <input type="password" required="required"/><br>
+email : <input type="email" readonly="readonly" value="aa@aa.com" /><br>
+<input type="submit" value="쿼리 전송" />
+</form>
+<hr>
+<p>Lorem ipsum.</p>
+<p>Vero incidunt.</p>
+<div>Lorem.</div>
+<hr>
+<div class="box">
+	<p>Lorem.</p>
+</div>
+<div class="box">
+	<div>div - sub</div>
+	<p>Lorem.</p>
+	<div>div - sub</div>
+</div>
+<div class="box">
+	<p>Lorem.</p>
+	<p>Lorem.</p>
+	<p>Lorem.</p>
+</div>
+<div>Ab.</div>
+<p>Repellendus adipisci!</p>
+<p>Culpa neque.</p>
+<p>Voluptatem dicta.</p>
+<p>Officia esse?</p>
+</body>
+</html>

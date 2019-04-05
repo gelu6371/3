@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 5.오전 11:00:29</title>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+/* 전역변수 CSS 선언 
+전역변수로 선언하는 이유 : 유지보수 및 확장성이 좋다.
+*/
+:root{
+	--main-bg-color:orange;
+}
+p:first-child {
+	background-color: var(--main-bg-color);
+}
+p:nth-child(2) {
+	color: var(--main-bg-color);
+}
+p:last-child {
+	border-style:solid;
+	border-width:1px;
+	border-color:var(--main-bg-color);
+}
+
+</style>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Autem exercitationem voluptas earum aliquid.</p>
+<p>Ad quis laudantium illum repellendus.</p>
+</body>
+</html>
