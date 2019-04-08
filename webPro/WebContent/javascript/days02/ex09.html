@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 8.오후 3:04:06</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<select name="" id="font_color" onchange="fc_change()">
+<option value="0">black</option>
+<option value="1">red</option>
+<option value="2">green</option>
+<option value="3">blue</option>
+</select>
+<p id="demo"></p>
+
+<script>
+function fc_change() {
+	var fc = document.getElementById("font_color");
+	// fc.selectedIndex; // 선택된 인덱스
+	var sidx = fc.selectedIndex;
+	var text = fc.options[sidx].text;
+	var value = fc.options[sidx].value;
+	
+	var demo = document.getElementById("demo");
+	demo.innerHTML = "<span style = 'color:" + text + "'>" + text + ", " + value + "</span>";
+}
+</script>
+</body>
+</html>

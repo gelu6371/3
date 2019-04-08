@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 8.오후 2:27:34</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+숫자 입력 : <input type="text" id="num" onkeydown="num_keydown();" />
+<br>
+Email : <input type="text" id="email" onkeyup="num_keyup();"/>
+<br>
+Password : <input type="text" id="pwd" />
+
+<script>
+var emai = document.getElementById("email");
+function num_keyup() {
+	if(event.keyCode == 13){
+		var pattern1 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		if (!pattern1.test(emai)) {
+			alert("입력 형식 잘못");
+		}
+	}
+}
+</script>
+<p id="demo"></p>
+<script>
+var num = document.getElementById("num");
+function num_keydown() {
+	if (event.keyCode == 13) {
+		// Number() -> isNaN()
+		// js 정규표현식
+		// js 형식 : /pattern/modifies;
+		//         /^[0-9]+$/i
+		//                   g
+		//                   m
+		var pattern = /^[0-9]+$/i;
+		/* pattern.test(); */
+		if (!pattern.test(num)) {
+			alert("입력 형식 잘못");
+		}
+	}
+}
+</script>
+</body>
+</html>

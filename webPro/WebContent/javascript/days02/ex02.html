@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 8.오전 9:47:21</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<!-- 키보드 입력할 때 일어나는 이벤트 -->
+
+<input type="text" id="in" autofocus="autofocus" onkeyup="in_keyup();"/>
+<script>
+var age; // window.age 라는 전역변수
+function in_keyup() {
+	var name = 'kenik';
+	// js에서 이벤트 발생할 때 모든 이벤트 정보 -> event 내장 객체 제공
+	// 이벤트 발생하면 자동으로 이벤트 정보를 가지는 event 내장 객체 생성
+	/* if(event.altKey && event.keyCode == 13){ */
+	if(event.altKey && event.shiftKey && event.keyCode == 13){ /* 13 : 엔터키, 따라서 alt + shift + enter해야 입력한다.  */
+		
+	console.log(document.getElementById("in").value);
+	document.getElementById("out").value = document.getElementById("in").value;
+	}
+}
+</script>
+<br>
+<input type="text" id="out"/>
+<hr>
+<!-- java 최상위 부모클래스 : java.lang.Object -->
+<!-- javascript의 최상위 : window -->
+<p id="demo" onclick="window.alert('경고창 출력')"></p>
+<script>
+document.getElementById("demo").innerHTML="<span style=color:red> 출력1 </span>";
+//document.getElementById("demo").innerText="<span style=color:red> 출력1</span>";
+</script>
+<!-- js로 data 출력하는 방법 
+     1) innerHTML, innerText
+     2) document.write() -> html 출력
+     3) window.alert();  -> 경고창 출력(디버깅)
+     4) console.log();   -> 브라우저의 콘솔에 출력.(디버깅)
+
+-->
+
+<script>
+document.write();
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 8.오전 11:03:05</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<button onclick="btn1_click()">버튼1</button>
+<button onclick="btn2_click()">버튼2</button>
+<script>
+// var age = 25; // 전역 변수
+age = 30; // 전역 변수
+
+var name; // 변수 선언만 하고 초기화 작업 X
+ function btn1_click() {
+	/* 
+	var x;
+	var y;
+	var z; */
+	/* 
+	var x, y, z; // 변수 선언
+	x = 5;
+	y = 3.14;
+	z = "kenik";
+	z = x + y;
+	console.log(z);
+	 */
+	 
+	 // var msg = "hello~"; // 지역변수
+	 
+	 // var이라는 키워드로 변수 선언 없이 할당하고 사용가능
+	 msg = "hello~"; // 전역변수
+	 // alert(msg);
+	 // alert(age);
+	 // alert(name);
+	 document.getElementById("demo").innerHTML = name;
+}
+/* 
+ Uncaught ReferenceError: msg is not defined
+ at btn2_click (ex03.html:33)
+ at HTMLButtonElement.onclick
+*/
+ function btn2_click() {
+	// alert(msg);
+	alert(age);
+}
+ // java 명령라인 뒤에 세미콜론;
+ // js   명령라인 뒤에 세미콜론;
+ // window.alert("경고창");
+ // var name = '홍길동';
+ // document.write('test');
+</script>
+<p id="demo"></p>
+<script>
+var x = 10;
+var y = "20";
+var z = x + y;
+console.log(z);
+</script>
+</body>
+</html>

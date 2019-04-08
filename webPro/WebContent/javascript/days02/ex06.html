@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 8.오후 12:12:16</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<input type="text" id="num1" autofocus="autofocus" onkeyup="key1_up();" />
++
+<input type="text" id="num2" onkeyup="key2_up();" />
+=
+<input type="text" id="num3" />
+
+<script>
+	z = document.getElementById("num3"); 
+	
+function key1_up() {
+	x = Number(document.getElementById("num1").value);
+	if (event.keyCode == 13) {
+		if (isNaN(x)) {
+			alert("숫자만 입력해 주세요");
+			num1.focus();
+			num1.select();
+			return;
+		} else {
+			num2.focus();
+		}
+	}
+}
+function key2_up() {
+	if (event.keyCode == 13) {
+	y = Number(document.getElementById("num2").value);
+		if (isNaN(y)) {
+			alert("숫자만 입력해 주세요");
+			num2.focus();
+			num2.select();
+			return;
+		}
+		else num3.value = x + y;
+	}
+}
+
+</script>
+</body>
+</html>
