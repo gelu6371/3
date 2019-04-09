@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 9.오후 3:47:55</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+#demo li{
+	list-style-type: lower-roman;
+}
+</style>
+</head>
+<body>
+<input type="text" id="data" style="width: 300px;" autofocus="autofocus" />
+<p id="demo"></p>
+<script>
+document.getElementById("data").onkeyup = function() { 
+	if (event.keyCode == 13) {
+		data = document.getElementById("data").value;
+		pattern = /\s*,\s*/;
+		datas = data.split(pattern);
+		demo = document.getElementById("demo");
+		// demo.innerHTML = "<ol>";
+		for (var i = 0; i < datas.length; i++) {
+			demo.innerHTML += "<li>" + datas[i] + "</li>";
+		}
+		// demo.innerHTML += "</ol>";
+	}
+	
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 9.오전 10:00:44</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+jumsu : <input type="text" id="jumsu" onkeydown="test();" />
+<p id="demo"></p>
+
+<script>
+function test() {
+	if (event.keyCode == 13) {
+		var jumsu = document.getElementById("jumsu").value;
+		var pattern = /^(100|[1-9]?\d$)/;
+		
+		document.getElementById("demo").innerHTML = jumsu + "는" + pattern.test(jumsu);
+	}
+}
+</script>
+</body>
+</html>

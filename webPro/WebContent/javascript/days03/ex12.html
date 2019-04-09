@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 9.오후 4:13:04</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+ var n = 100 / 21; // 4.761904761904762
+ var n = parseInt(100/21); // 몫
+ var n = 100 % 21; // 나머지
+ 
+ var n = 100 / "apple"; // NaN
+ console.log(isNaN(n)); // true
+ var n = 100 / "2"; // 50
+ 
+ var n = 100 + NaN; // NaN
+ var n = "100" + NaN; // 100NaN
+ 
+ console.log(typeof NaN); // number
+ 
+ var n = 2 / 0 ; // Infinity
+ console.log(typeof Infinity); // number
+ 
+ var n  = -2 / 0; // -Infinity
+ 
+ // 16진수 : 0x????
+ var n = 0xFF; // 255
+ 
+ // 앞에 0을 붙이니 8진수로 인식
+ var n = 010; // 8
+ 
+</script>
+ 10진수 : <input type="text" value="10" id="n" />
+ <p id="demo"></p>
+ <script>
+ document.getElementById("n").addEventListener("keydown", function() {
+ 	if (event.keyCode == 13) {
+ 		var demo = document.getElementById("demo");
+ 		// toString() 메서드 : 숫자를 문자열로 변환하는 함수
+ 		var n = parseInt(event.srcElement.value);
+		// 16진수
+ 		demo.innerHTML = n.toString(16) + "<br>";
+		// 10진수
+		// 8진수
+		demo.innerHTML += n.toString(8) + "<br>";
+		// 2진수
+		demo.innerHTML += n.toString(2) + "<br>";
+	}
+ });
+ 
+ </script>
+</body>
+</html>

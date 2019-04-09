@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 9.오후 3:28:19</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+
+<script>
+ var src = "hello world LLow~~";
+ var pattern = /llo/ig;
+ // i : 대소문자 구분 X, g : 전체에 대해서
+ var result = src.replace(pattern, "XXX");
+ 
+ result.toUpperCase(); // 대문자로 변환
+ result.toLowerCase(); // 소문자로 변환
+</script>
+
+<script>
+ // concat();
+ // "hello" + "" + "world~"
+ // console.log("hello".concat(" ").concat("world"));
+ // console.log("hello".concat(" ", "world")); // 문자열 연결
+ 
+ var id = "   kenik     ";
+ // console.log(id.trim()); // 공백 제거
+ // trim() -> IE 8.0 이전 버전 지원 X
+</script>
+
+<script>
+var data = "hello world~";
+for (var i = 0; i < data.length; i++) {
+	// ECMAscript 5 이후부터 추가된 기능
+	document.write(data[i] + " / "); // charAt(i)랑 같은 결과 
+	document.write(data.charAt(i) + " / "); // 한 문자씩 출력
+	document.write(data.charCodeAt(i) + "<br>"); // 문자에 대한 아스키 코드값 출력
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 9.오전 11:17:10</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<button id="btn">한 번만 클릭할 수 있는 버튼</button>
+<p id="demo"></p>
+<script>
+window.addEventListener("resize", function () {
+	document.getElementById("demo").innerHTML = window.outerWidth;
+})
+// IE 8.0 이전에서는 이렇게 둘다 써줘야 한다.
+ var btn = document.getElementById("btn");
+ if (btn.addEventListener) {
+	btn.addEventListener("click", test)
+}else {
+	btn.attachEvent("onclick", test)
+}
+ 
+ function test() {
+	alert("test");
+	btn.innerHTML="클릭 안됨";
+	if (btn.removeEventListener) {
+		btn.removeEventListener("click", test)
+	}else {
+		btn.detachEvent("onclick", test)
+	}
+}
+</script>
+<!-- 
+IE 8.0 이전에는 이벤트리스너를 사용 못한다.
+element.addEventListener();
+element.removeEventListener();
+
+만약에 IE 8.0 이전이면 attach, detach 사용해야 한다.
+element.attachEvent();
+element.detachEvent();
+-->
+</body>
+</html>
