@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오후 3:35:50</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+/*
+ISO Date "2015-03-05"
+Short Date "03/05/2015"
+Long Date "May 05 2015"
+*/
+
+
+var d = new Date("2015-03-05"); // ISO Date 형식 사용
+var d = new Date(2015);
+var d = new Date("03/05/2015"); // Short Date 형식 사용
+
+var d = new Date();
+document.write(Data.parse(d)); // Date -> millisecond
+
+var milli = Date.parse(d);
+var d = new Date(milli);
+document.write(d.toLocaleDateString()); // millisecond -> Date
+</script>
+<p id="demo"></p>
+<script>
+var d = new Date();
+// 년, 월, 일, 시, 분, 초, 밀리세컨, 요일
+var demo = document.getElementById("demo")
+var data = "";
+data += d.getFullYear() + "년" + "<br>";
+data += (d.getMonth()+1) + "월" + "<br>";
+data += d.getDate() + "일" + "<br>";
+data += d.getHours() + "시" + "<br>";
+data += d.getMinutes() + "분" + "<br>";
+data += d.getSeconds() + "초" + "<br>";
+data += d.getMilliseconds() + "밀리세컨드" + "<br>";
+data += d.getDay() + "요일" + "<br>";
+demo.innerHTML = data;
+
+</script>
+<script>
+var d = new Date();
+d.getTime();
+
+</script>
+</body>
+</html>

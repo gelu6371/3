@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2019. 4. 10. - 오전 8:52:13 </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="">
+<style>
+</style>
+</head>
+<body>
+<!-- 1****** -->
+<!-- <input type="password" /> -->
+<br>
+<input type="text" id="rrn7"  maxlength="7" autofocus="autofocus"
+  onkeydown="return rrn7_keydown();"
+  onkeypress="return rrn7_keypress();"
+  onkeyup="rrn7_keyup();"
+ />
+ <p id="demo"></p>
+ <script>
+   var rrn7 =  document.getElementById("rrn7");
+   function rrn7_keydown(){
+	   //alert( /[\b]/.test(String.fromCharCode( event.keyCode ) ) );
+	   
+	   //console.log("rrn7_keydown / " + rrn7.value.length);	    
+	   var pattern = /^\D$/;   // \D   [^0-9]   \d[0-9]	
+	   
+	   if( /[\b]/.test(String.fromCharCode( event.keyCode ) )){
+		   rrn7value = rrn7value.slice(0, -1);
+	   }else if( rrn7.value.length >= 7){
+		   return false;
+	   }
+	   else if( pattern.test(String.fromCharCode( event.keyCode )) ){
+		   alert('숫자만 입력하세요.');
+		   return false;
+	   }
+	   //
+   }
+   
+   var rrn7value = "";
+   function rrn7_keypress(){ 
+	   //alert( event.keyCode)
+	   if( event.keyCode  != 8 ){
+		   //console.log("rrn7_keypress / " + rrn7.value.length);
+		   var rrn7length =  rrn7.value.length;
+		   rrn7value += String.fromCharCode( event.keyCode );
+	
+		   if( rrn7length >=1  ){
+			   rrn7.value +="*";
+			   if( rrn7length == 6 ){
+				   document.getElementById("demo").innerHTML = rrn7value;
+			   }
+			   return false;		
+		   }
+	   } 
+	   
+   }
+   function rrn7_keyup(){
+	   //console.log("rrn7_keyup / " + rrn7.value.length);
+	   console.log( rrn7value );
+   }
+ </script>
+</body>
+</html>

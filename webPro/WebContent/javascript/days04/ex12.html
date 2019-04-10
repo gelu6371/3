@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오후 4:15:30</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+select {
+	width: 100px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<select id="cmbyear"></select>
+<select id="cmbmonth"></select>
+<select id="cmbdate"></select>
+<script>
+var now = new Date();
+var year = now.getFullYear();
+var month = now.getMonth() + 1;
+
+
+var cmbyear = document.getElementById("cmbyear");
+for (var i = 1970; i <= 2050; i++) {
+	if (i == year) {
+		cmbyear.options[i-1970] = new Option(i, i, true, true);
+	}else {
+		cmbyear.options[i-1970] = new Option(i,i);
+	}
+}
+
+var cmbmonth = document.getElementById("cmbmonth");
+for (var i = 0; i < 12; i++) {
+	var text = (i+1) +"월";
+	var value = (i+1);
+	cmbmonth.options[i] = new Option(text, value);
+}
+cmbmonth.selectedIndex = month - 1;
+</script>
+</body>
+</html>

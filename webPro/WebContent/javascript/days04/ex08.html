@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오후 2:15:28</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+/* function sum(n,m) {
+	return n + m;
+} */
+function sum() {
+	var hap = 0;
+	for (var i = 0; i < arguments.length; i++) {
+		hap += arguments[i];
+	}
+	return hap;
+}
+
+
+var result = sum(10,20,30);
+// document.write(result);
+
+</script>
+<select id="bgcolor">
+<!-- <option value="value">text</option> --> 
+
+ <!-- 동적(코딩) Option 추가
+ bgcolor.options[0] = new Option(); -->
+
+</select>
+
+<script>
+var bgcolor = document.getElementById("bgcolor");
+
+//var optionObj = new Option("빨강","red")
+//bgcolor.options[0] = optionObj;
+var colors = ["white", "red", "green", "blue"];
+for (var i = 0; i < colors.length; i++) {
+	bgcolor.options[i] = new Option(colors[i]);
+}
+
+bgcolor.onchange = function () {
+	var idx = bgcolor.selectedIndex;
+	var value = bgcolor.options[idx].value;
+	// var text = bgcolor.options[idx].text;
+	document.bgColor = value;
+	// document.body.style.backgroundColor = value;
+}
+</script>
+</body>
+</html>

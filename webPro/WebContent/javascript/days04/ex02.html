@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오전 10:27:50</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+숫자 입력 : <input type="text" id="numbers" value="3,5,2,4,1" /><br>
+<button id="btnexec">실행</button>
+<p id="demo"></p>
+<script>
+// document.getElementById("btnexec").onclick = function(){}
+document.getElementById("btnexec").addEventListener("click", function() {
+	data = document.getElementById("numbers").value;
+	datas = data.split(",");
+	console.log(datas);
+	datas.sort();
+	/* 
+	output = "<ol>";
+	for (var i = 0; i < datas.length; i++) {
+		output += "<li>" + datas[i] + "</li>"
+	}
+	output += "</ol>";
+	document.getElementById("demo").innerHTML = output;
+	 */
+	document.getElementById("demo").innerHTML = "<li>" + datas.join("</li><li>") + "</li>";
+});
+</script>
+<hr>
+<script>
+/* js 배열 */
+/*   
+java 배열 : int [] m = new int[3]
+	      int [] m = {1,2,3};
+	      
+*/
+
+// var m = new Array(); // var m = [];
+var m = new Array(1,2,3); // var m = [ 1, 2, 3 ];
+// 배열 크기
+document.write(m.length + "<br>");
+
+document.write(m[0] + "<br>");
+m[1] = 100;
+document.write(m[1] + "<br>");
+document.write(m[2] + "<br>");
+// alert(typeof m)
+</script>
+<script>
+document.write("-".repeat(10));
+</script>
+</body>
+</html>

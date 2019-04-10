@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오후 2:15:28</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+
+<script>
+// ex08.html을 jquery로 작성
+var $bgcolor = $("<select id='bgcolor'></select>")
+$('body').append($bgcolor);
+
+var colors = ["white", "red", "green", "blue"];
+for (var i = 0; i < colors.length; i++) {
+ $("#bgcolor").append("<option>"+ colors[i] + "</option>");
+}
+
+$('#bgcolor').change(function () {
+	// $(this).val();
+	// $(this).text();
+	document.bgColor = $(this).val();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오전 11:34:35</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+var points = [3,5,2,4,1];
+/* // ECMAScript5 추가된 Array.isArray()
+// alert(points.toString()); // toString() 문자열반환
+points.push(100);
+alert(points.toString()); // 3,5,2,4,1,100
+// alert(points[points.length-1]); // 100(제일 마지막)
+// alert(points.pop()); // 100(제일 마지막)
+// shift() : 첫번째(0번째) 요소를 제거하고 두번째 요소부터 왼쪽으로 이동
+points.shift();
+alert(points.toString()); // 5,2,4,1,100 
+
+
+points.shift();
+alert(points.toString()); // 2,4,1,100
+*/
+</script>
+<input type="text" id="data" value="xxx" onkeydown="data_keydown()"/>
+<script>
+function data_keydown() {
+	if (event.keyCode == 13) {
+		var data = event.srcElement.value;
+		// 새로운 매개변수를 0번째 요소에 추가하고 나머지는 오른쪽으로 한칸씩 이동
+		points.unshift(data);
+		alert(points.toString());
+	}
+}
+</script>
+<script>
+// 2번째 요소의 값 삭제
+// delete points[1];
+// alert(points[1]); // undefined
+</script>
+<script>
+// points.splice(1,2,100,200); // 1번째 자리에 2개 제거하고 100, 200 집어넣겠다.
+// points.splice(1,0,100,200); // 1번째 자리에 제거하지 않고 100, 200 집어넣겠다.
+points.splice(1,1); // 1번째 요소 제거
+</script>
+
+<script>
+var arr1 = [1,2,3];
+var arr2 = [100,200];
+var arr3 = [4,2];
+// 두 배열 병합 : concat()
+// concat()으로 합친 배열을 반환하면 원래 배열 그대로 유지
+var conarr = arr1.concat(arr2,arr3);
+// alert(conarr); // 1,2,3,100,200,4,2
+</script>
+
+<script>
+// 배열 자르기
+var points = [1,2,3,4,5];
+// var arr = points.slice(2); // 3,4,5
+var arr = points.slice(2,4); // 3,4
+alert(arr);
+</script>
+</body>
+</html>

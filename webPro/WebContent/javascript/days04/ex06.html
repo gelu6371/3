@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 10.오후 12:30:41</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+ var m = [];
+ var n = [];
+ // 1. m에 10개의 정수 랜덤하게 저장. (0 ~ 100)
+ // 2. 30 정수보다 큰수를 배열 n에 담아서 출력.
+ for (var i = 0; i < 10; i++) {
+		m[i] = Math.ceil(Math.random()*100);
+}
+ document.write(m + "<br>"); 
+	 var n = m.filter(function(value, index, array) {
+		return value > 30;
+	}); 
+ document.write(n);
+</script>
+</body>
+</html>
