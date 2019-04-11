@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 11.오전 10:02:00</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<ul class="days">
+</ul>
+<script>
+function getLastDay(year, month) {
+	var d = new Date(year, month);
+	d.setDate(0);
+	return d.getDate();
+}
+</script>
+<script>
+var curr_year = 2019;
+var curr_month = 4;
+var lastDay = getLastDay(curr_year, curr_month);
+var ul_days = document.getElementsByClassName("days")[0];
+
+for (var i = 1; i <= lastDay; i++) {
+var li_day = document.createElement("li");
+var li_text = document.createTextNode(i);
+li_day.appendChild(li_text);
+ul_days.appendChild(li_day);
+}
+
+/* 
+var output = "";
+for (var i = 1; i <= lastDay; i++) {
+output += "<li>" + i + "</li>"
+}
+ul_days.innerHTML = output;
+*/
+</script>
+</body>
+</html>

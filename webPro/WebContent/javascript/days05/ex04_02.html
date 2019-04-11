@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 11.오후 2:04:04</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+*{
+box-sizing: border-box;
+}
+
+body {
+ font-family: Verdana, sans-serif;
+ margin: 0;
+}
+
+.mySlides{
+display: none;
+}
+
+img {
+vertical-align: middle;
+}
+
+.slideshow-container{
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+.prev, .next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition:0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+.prev{
+	left: 0;
+}
+.next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+background-color: rgba(0,0,0,0.8);
+}
+
+.text{
+	color: #2f2f2f;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+.numbertext{
+	color: #2f2f2f;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.dot{
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	transition: background 0.6 ease;
+}
+
+.active, .dot:hover{
+	background-color: #717171;
+}
+
+.fade{
+	animation-name:fade;
+	animation-duration:1.5s;
+}
+
+@keyframes fade{
+from{}
+}
+
+dots {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+<div class="numbertext">1 / 3</div>
+<img src="/webPro/javascript/images/img_mountains_wide.jpg" alt="" style="width: 100%" />
+<div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">2 / 3</div>
+<img src="/webPro/javascript/images/img_nature_wide.jpg" alt="" style="width: 100%" />
+<div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">3 / 3</div>
+<img src="/webPro/javascript/images/img_snow_wide.jpg" alt="" style="width: 100%" />
+<div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+<a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+<div class="dots" style="text-align: center">
+<span class="dot" onclick="dotSlide(1)"></span>
+<span class="dot" onclick="dotSlide(2)"></span>
+<span class="dot" onclick="dotSlide(3)"></span>
+</div>
+
+</div>
+
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+/* 
+function dotSlide(n) {
+	showSlides(slideIndex=n);
+} */
+
+function changeSlide(n) {
+	slideIndex += n;
+	slideIndex = slideIndex == 0?3:(slideIndex == 4?1:slideIndex);
+	showSlides(slideIndex);
+}
+
+function showSlides(n){
+	$(".mySlides").css("display", "none");
+	$(".dot").removeClass("active");
+	
+	$(".mySlides").eq(n-1).css("display","block");
+	$(".dot").eq(n-1).addClass("active");
+	
+/* 	$(".mySlides").each(function(index){
+		if(index==n-1) $(this).css("display","block");
+		else           $(this).css("display","none");		
+	}); */
+	
+	
+}
+</script>
+</body>
+</html>

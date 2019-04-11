@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 11.오후 4:06:15</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.container{
+	width: 500px;
+}
+.collapsible{
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+.collapsible::after{
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.collapsible:hover, .active{
+	background-color: #555;
+}
+
+.content {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition:max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
+
+.active::after{
+	content: '\2212';
+}
+</style>
+</head>
+<body>
+
+<div class="container"></div>
+<button class="collapsible">Section 1</button>
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repudiandae dolorem aliquid eligendi modi magnam distinctio facere molestiae in id pariatur itaque corrupti quidem perferendis aut autem quia ab maxime.</div>
+<button class="collapsible">Section 2</button>
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsum ea laborum possimus consectetur perspiciatis fuga recusandae voluptate necessitatibus veniam eum delectus vitae dolor totam eaque sed nemo dolore asperiores?</div>
+<button class="collapsible">Section 3</button>
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero esse cumque molestiae pariatur mollitia praesentium quia velit tenetur deleniti omnis impedit nobis quaerat dolore sed id! Voluptatum perspiciatis odit ex.</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+for (var i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function () {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		
+		if(content.style.maxHeight){
+			content.style.maxHeight = null;
+		}else{
+			content.style.maxHeight = content.scrollHeight + "px";
+		}
+	})
+}
+</script>
+</body>
+</html>

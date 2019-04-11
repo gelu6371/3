@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 11.오전 9:00:11</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var demo = document.getElementById("demo");
+// var now_year = new Date().getFullYear();
+var now_year = new Date().getFullYear();
+var lastDays = [];
+for (var i = 1; i <= 12; i++) {
+	var d = new Date(now_year, i);
+	d.setDate(0);
+	lastDays.push(d.getDate());
+}
+demo.innerHTML = "<ol><li>" + lastDays.join("</li><li>") + "</li></ol>";
+
+</script>
+<script>
+var now = new Date();
+
+</script>
+</body>
+</html>
