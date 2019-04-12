@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 12.오후 2:01:56</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+/* js data type */
+/* 
+string
+number
+boolean
+function
+object
+*/
+
+/* js object */
+/* Object
+Date
+Array
+String
+Number
+Boolean
+*/
+
+/* js 형변환  */
+/* 1) number -> string 형변환
+1 + ""
+new String();
+true.toString();
+new String(new Date());
+Date().toString();
+
+2) string -> number 형변환
+parseInt() / parseFloat()
+Number()
+eval()
+
+3)
+Number(fasle) -> 0
+Number(true)  -> 1
+*/
+
+/* js bit operator */
+/* 
+&, |, ^, ~
+<<, >>, >>>
+*/
+
+/* 
+js Regex 정규표현식
+형식 : /pattern/modifiers
+ */
+ 
+var msg = "hello world~";
+// var pattern = "world";
+var pattern = /world/i; // i : 대소문자 구별 x
+
+msg.replace(pattern, replacement)
+
+var result = msg.search(pattern);
+</script>
+<script>
+var msg = "abc\nis???\nIs xxx";
+var pattern = /^is/m;
+var result = msg.match(pattern);
+</script>
+
+<input type="text" id="num" />
+<button type="button" onclick="exec()">exec</button>
+<p id="demo"></p>
+<script>
+/* js 예외 처리  
+ 입력하지 않으면 예외 발생
+ 0보다 작으면 예외 발생
+ 100보다 크면 예외 발생
+ 숫자 아니면 예외 발생
+ */*/
+function exec() {
+	var num = document.getElementById("num").value;
+	try {
+		if(num == "") throw "empty";
+		if(isNaN(num)) throw "not a number";
+		if(!(0<= num && num <= 100)) throw "num out of range";
+	} catch (e) {
+		$("#demo").html(err)
+	}finally{
+		
+	}
+	$("#demo").html(num);
+}
+</script>
+</body>
+</html>

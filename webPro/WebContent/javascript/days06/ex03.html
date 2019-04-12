@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 12.오전 11:04:42</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+/* Boolean(매개변수) 함수 */
+// Boolean 객체
+
+console.log(10>9);
+console.log(Boolean(10>9));
+
+console.log(100);
+console.log(3.14);
+console.log(-10);
+console.log("hello");
+console.log("false");
+console.log(10+5);
+
+console.log(Boolean(0));
+x = "x";
+console.log(Boolean(x));
+var y = null;
+console.log(Boolean(y));
+var z = 10 / "x";
+console.log(Boolean(z));
+
+var x1 = false; // 아래꺼보다 권장
+var x2 = new Boolean(false);
+</script>
+<script>
+// 비교 연산자 : ==, !=, >, <, >=, <=
+// 타입까지 비교 : ===, !==
+alert(x1 == x2); // true
+alert(x1 === x2); // false
+</script>
+<script>
+// 논리 연산자 : &&, ||, !
+// 삼항 연산자 : ? :
+	
+	// alert(2 < 12) // true
+	// alert(2 < "12") // true
+	// alert(2 < "a") // false
+	// alert("2" > "12") // true
+</script>
+</body>
+</html>

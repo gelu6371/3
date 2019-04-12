@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 12.오전 9:23:34</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<button>create lotto</button>
+<p id="demo"></p>
+<script>
+ function getRndRange(min, max) {
+	return Math.floor(Math.random() * (max-min+1)) + min;
+}
+ 
+ // 중복되면 false 
+ // 중복 안되면 true
+ function isDuplicationLotto( lottos, n ) {
+	return lottos.every(function (value, index, array) {
+		return value != n; // value 값 하나하나씩 비교하겠다.
+	})
+}
+</script>
+<script>
+var lottos = [];
+var n = -1;
+$("button").click(function() {
+	/* for (var i = 0; i <= 5; i++) {
+		lottos[i] = (Math.floor(Math.random()*45)+1);
+	}
+	document.write(lottos); */
+	lottos = [];
+	while (lottos.length < 6) {
+		n = getRndRange(1,45);
+		if(isDuplicationLotto(lottos,n)) lottos.push(n);
+	}
+	console.log(lottos);
+});
+</script>
+</body>
+</html>
