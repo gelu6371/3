@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 15.오후 2:38:09</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+function test() {
+	var privateCounter = 0;
+	
+	return function() {
+		privateCounter++;
+		return privateCounter;
+	}
+}
+
+	var fn1 = test();
+	var fn2 = test();
+	
+	console.log(fn1());
+	console.log(fn1());
+	console.log(fn2());
+
+</script>
+</body>
+</html>

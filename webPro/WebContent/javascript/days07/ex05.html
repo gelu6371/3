@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 15.오전 10:51:09</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<script>
+// var person1 = {}; -> JS 객체
+var person1 = {
+		name:"admin",
+		age:20
+}
+var person2 = {
+		name:"hong",
+		age:15
+}
+
+var person = {
+		print:function(){
+			return this.name + "/" + this.age;
+		}
+};
+
+console.log(person.print.call(person1));
+console.log(person.print.call(person2));
+</script>
+<script>
+function test(x, y){
+	if (y === undefined) {
+		y = 0;
+	}
+	return x + y;	
+}
+
+console.log(test(10));
+console.log(test(x=10,y=20)); // ECMAScript2016 ~ 
+
+</script>
+</body>
+</html>

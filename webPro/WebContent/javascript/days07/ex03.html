@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 15.오전 10:28:46</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+/* 함수 선언
+  function fname(para...){
+	// code
+	// [return 문;]
+}
+ */
+ 
+ // [js 함수는 표현식을 사용하여 정의할 수 있다.]
+ // 익명함수 선언 -> hap 변수에 저장
+ // [함수 표현식]
+ var hap = function (a,b){
+	 return a+b;
+ }
+ 
+ console.log(hap(12,3));
+ // function hoisting
+ // 함수 선언 -> 호출
+ // 함수 호출 -> 선언
+ 
+ console.log(x);
+ 
+ var x = 100;
+ 
+ // [자체 호출 함수]
+ /* 
+ function disp(){
+	 return "disp";
+ }
+ 
+ var result = disp();
+ console.log(result);
+  */
+  
+  /* 
+  var test = function(){return "disp"};
+  test();
+   */
+   
+   
+   (function (){return "test";})();
+   
+</script>
+
+<script>
+	/* 
+	var x1 = 0; // number
+	var x2 = ""; // string
+	var x3 = false; // boolean
+	var x4 = function (){} // object
+	var x5 = []; // object
+	var x6 = {}; // object
+	var x7 = //; // object == new RegExp("");
+	 */
+</script>
+</body>
+</html>

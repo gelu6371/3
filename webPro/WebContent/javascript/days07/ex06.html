@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 15.오전 11:25:05</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var i;
+for (i = 0; i < 10; i++) {
+  setTimeout(function() {
+    console.log(i);
+    // $("demo").html($("demo").html()+i);
+  }, 1000);
+}
+
+var i;
+for (i = 0; i < 10; i++) {
+  (function(j) {
+    setTimeout(function() { // 클로저
+      console.log(j);
+    }, 1000);
+  })(i);
+}
+
+</script>
+
+<script>
+// 함수
+function hello(name) {
+	  var _name = name; // 지역변수 _name 선언
+	  return function() {
+	    console.log('Hello, ' + _name);
+	  };
+	}
+
+	var hello1 = hello('승민');
+	var hello2 = hello('현섭');
+	var hello3 = hello('유근');
+
+	// hello1(); // 'Hello, 승민'
+	// hello2(); // 'Hello, 현섭'
+	// hello3(); // 'Hello, 유근'
+	
+</script>
+
+
+
+<script>
+function Hello(name) {
+	  this._name = name;
+	}
+	
+	// say 메서드를 추가하는 코딩.
+	Hello.prototype.say = function() {
+	  console.log('Hello, ' + this._name);
+	}
+	
+	var hello1 = new Hello('승민');
+	var hello2 = new Hello('현섭');
+	var hello3 = new Hello('유근');
+	
+	// hello1.say(); // 'Hello, 승민'
+	// hello2.say(); // 'Hello, 현섭'
+	// hello3.say(); // 'Hello, 유근'
+	
+	hello1._name = 'anonymous';
+	// hello1["_name"]='anonymous';
+	// hello1.say(); // 'Hello, anonymous'	
+	
+	// 클로저를 사용하여
+	// 외부에서 변수(필드)에 직접 접근하는 것을 제한할 수 있다.
+	
+	
+</script>
+
+
+
+<script>
+	var base = 'Hello, ';
+	function sayHelloTo(name) {
+	  var text = base + name;
+	  return function() {
+	    console.log(text);
+	  };
+	}
+
+</script>
+<script>
+// var hap = function () {};
+
+function getClosure() {
+  var text = 'variable 1';
+  return function() {
+    return text;
+  };
+}
+
+var closure = getClosure();
+// console.log(closure);
+// console.log(closure());
+// console.log(getClosure()());
+
+
+
+/* JavaScript 클로저(Closure)
+   1. 클로저는 독립적인 (자유) 변수를 가리키는 함수이다. 
+   2. 또는, 클로저 안에 정의된 함수는 만들어진 환경을 ‘기억한다’.
+   3. 함수 내에서 함수를 정의하고 사용하는 것을 클로저라고 한다.
+*/
+</script>
+</body>
+</html>
