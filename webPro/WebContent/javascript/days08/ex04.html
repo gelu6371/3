@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 16.오후 12:33:30</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<!-- 
+js HTML DOM
+1. 브라우저가 요청한 후 응답받은 웹 페이지를 로딩할 때 DOM 객체 생성
+2. js 사용해서 모든 요소에 접근하고 변경...........
+3. document node(노드)
+
+   html(root element) (루트노드)
+   
+       head   body
+        
+        title <title id="">제목</title>
+        
+        text 제목도 하나의 node   id속성도 하나의 node
+
+4. DOM + js
+ ㄱ. html 요소를 변경
+ ㄴ. html 속성을 변경
+ ㄷ. css 스타일을 변경
+ ㄹ. 요소 + 속성 제거, 추가
+ ㅁ. html 요소의 이벤트 처리
+ 
+5. w3c 협회에서 구분하는 3가지 DOM
+ ㄱ. Core DOM - 모든 파일의 기본이 되는(표준) 모델
+ ㄴ. HTML DOM - html 파일을 객체화 시키는것
+ ㄷ. XML DOM  - XML 파일을 객체화 시키는것
+ 
+6. HTML DOM 문서 객체 : document 객체
+ ㄱ. 웹페이지를 나타낸다.
+ ㄴ. html 요소를 접근하기 위해서는 document 객체를 접근..
+-->
+<p id="demo"></p>
+<script>
+// document(html DOM에서의 문서 객체).getElementById(id)
+// name, tag, class, id
+
+// [html 요소 변경]
+// 1. element.innerHTML = content;
+var demo = document.getElementById("demo");
+demo.innerHTML = "<span color='red'>test</span>"
+// 2. element.attribute = value;
+// 3. element.style.property = ??
+// 4. element.setAttribiute(attribute, value);
+
+// [html 요소 추가, 삭제]
+// document.createElement(tagName);
+// document.appendChild(newNode);
+// document.removeChild(oldNode);
+// document.replaceChild(newChild, oldChild);
+// document.write("<span></span>");
+// document.write("<br>");
+
+// [이벤트 핸들러 등록]
+// document.getElementById(id).onclick = function() {}
+
+// document.dotype = <!DOCTYPE html> element
+// document.documentElement = <html> element
+// document.title = <title> element
+// document.head == <head> element
+// document.body == <body> element
+// document.getElementById(id); == <body> element
+// document.getElementsByTagName("body")[0]== <body> element
+
+// document.cookie 쿠키 
+
+// document.forms 컬렉션
+// document.images 컬렉션 = <img> 집합
+// document.links 컬렉션   = <a> 집합 
+// document.scripts 컬렉션
+// document.styleSheets 컬렉션
+
+// console.log(document.URL);
+console.log(document.referrer);
+
+</script>
+</body>
+</html>

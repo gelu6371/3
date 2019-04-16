@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 16.오전 8:48:49</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.box{
+	position: absolute;
+}
+</style>
+</head>
+<body>
+<img src="/webPro/javascript/images/item01.gif" alt="" />
+<script>
+function getRandomInt(min, max){
+	return Math.floor(Math.random()*(max-min+1)+min); // min <= 정수 <= max
+}
+
+document.oncontextmenu = function(){
+	//alert("오른쪽 마우스는 사용하지 못합니다");
+	return false;
+}
+
+document.onmousedown = function (){
+	// console.log(event.button); // 마우스 왼쪽버튼 = 0, 휠버튼 = 1, 오른쪽버튼 = 2 
+	if(event.button == 0){
+		document.title = event.clientX + "," + event.clientY;
+		var x = event.x;
+		var y = event.y;
+		
+		var img = document.createElement("img");
+		var url = "/webPro/javascript/images/item0" + getRandomInt(1,9) +".gif";
+    	img.setAttribute("src", url);
+		document.body.appendChild(img);
+		img.classList.add("box");
+		img.style.left = x-$("img").width() / 2 + "px";
+		img.style.top = y-$("img").width() / 2 + "px";
+		
+	}else if(event.button == 2){
+		if(event.srcElement.className == "box"){
+		var result = confirm("정말 삭제할까요?");
+		if(result) document.body.removeChild(event.srcElement);
+		}
+	}else if(event.button == 1){
+		// 모든 이미지 제거
+		while (document.images.length != 0) {
+	    	 document.images[0].remove();
+		} 
+	}
+}
+
+document.onmousemove = function (){
+	// document.title = event.clientX + "," + event.clientY;
+}
+</script>
+</body>
+</html>

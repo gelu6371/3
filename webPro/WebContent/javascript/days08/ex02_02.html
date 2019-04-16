@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 16.오전 10:02:58</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+table {
+	width: 50%;
+	margin: 0 auto;
+}
+table, td, th{
+	border: solid 1px gray;
+}
+
+table > thead > tr:first-child{
+	background-color: gray;
+	color: white;
+}
+
+tr > td:first-child{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th><input type="checkbox" id="ckbAll"/>Lorem.</th>
+<th>Hic!</th>
+<th>Quidem!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><input type="checkbox" id="7369" class="sub"/>Lorem.</td>
+	<td>Ea!</td>
+	<td>Ratione.</td>
+</tr>
+<tr>
+	<td><input type="checkbox" id="7789" class="sub"/>Lorem.</td>
+	<td>Cum.</td>
+	<td>Distinctio.</td>
+</tr>
+<tr>
+	<td><input type="checkbox" id="9833" class="sub"/>Lorem.</td>
+	<td>Quaerat!</td>
+	<td>Tempore.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3">
+<input type="button" name="" id="empAdd" value="사원추가"/>
+<input type="button" name="" id="empDelete" value="사원삭제"/>
+<input type="button" name="" id="empEdit" value="사원수정"/>
+</td>
+</tr>
+</tfoot>
+</table>
+<p id="demo"></p>
+<script>
+// :checkbox == input[type='checkbox']
+$("thead :checkbox").click(function() {
+	// alert($(this).prop("checked")); // true 또는 false
+	// alert($(this).is(":checked"));  // true 또는 false
+	// alert(this.getAttribute("checked")); // String
+	$("tbody :checkbox").prop("checked", $(this).prop("checked"));
+	
+});
+$("#empDelete").click(function () {
+	var id = [];
+	// :checked 선택자도 jquery만 사용
+	$("tbody :checked").each(function(){
+		id.push($(this).attr("id"));
+	});
+    $("#demo").html("<ul><li>"+ id.join("</li><li>") + "</li></ul>");
+});
+</script>
+</body>
+</html>

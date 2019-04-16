@@ -56,7 +56,7 @@ function draggable(elem) {
 	
 	// 클로저(내장함수)
 	function dragMouseDown(e){
-		e = e || window.event;
+		e = e || window.event; // 호환성을 하기 위해 적어놓음.
 		
 		pos3 = e.clientX;
 		pos4 = e.clientY;

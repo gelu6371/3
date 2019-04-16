@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 16.오전 10:02:58</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+table {
+	width: 50%;
+	margin: 0 auto;
+}
+table, td, th{
+	border: solid 1px gray;
+}
+
+table > thead > tr:first-child{
+	background-color: gray;
+	color: white;
+}
+
+tr > td:first-child{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<table id="tblEmp">
+<thead>
+<tr>
+<th><input type="checkbox" id="ckbAll"/>Lorem.</th>
+<th>Hic!</th>
+<th>Quidem!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><input type="checkbox" id="7369" class="sub"/>Lorem.</td>
+	<td>Ea!</td>
+	<td>Ratione.</td>
+</tr>
+<tr>
+	<td><input type="checkbox" id="7789" class="sub"/>Lorem.</td>
+	<td>Cum.</td>
+	<td>Distinctio.</td>
+</tr>
+<tr>
+	<td><input type="checkbox" id="9833" class="sub"/>Lorem.</td>
+	<td>Quaerat!</td>
+	<td>Tempore.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3">
+<input type="button" id="empAdd" value="사원추가"/>
+<input type="button" id="empDelete" value="사원삭제"/>
+<input type="button" id="empEdit" value="사원수정"/>
+</td>
+</tr>
+</tfoot>
+</table>
+<p id="demo"></p>
+<script>
+/* 
+document.getElementById("ckbAll").onclick = function(){
+		var ckblist = document.getElementsByClassName("sub");
+		for (var i = 0; i < ckblist.length; i++) {
+			ckblist[i].checked = this.checked;
+	}
+}
+*/
+
+// nodeList       document.getElementsByClassName(name);
+// HTMLCollection document.getElemtsByName(name);
+// nodeList       document.getElementsByTagName(tagname);
+
+// document.querySelector("thread input[type='checkbox']").onclick;
+var ckblist = document.querySelectorAll("tbody input[type='checkbox']");
+for (var i = 0; i < ckblist.length; i++) {
+ckblist[i].checked = this.checked;
+}
+
+document.getElementById("empDelete").onclick = function (){
+	   var id = [];
+	   var ckblist = document.querySelectorAll("tbody [type='checkbox']");
+	   for (var i = 0; i < ckblist.length; i++) {
+		   if( ckblist[i].checked )
+	         		//id.push( ckblist[i].id );
+		            id.push( ckblist[i].getAttribute("id") );
+	  }
+	   pdemo.innerHTML = "<ul><li>"+ id.join("</li><li>") + "</li></ul>";
+}
+
+	var table = document.getElementById("tblEmp");
+document.getElementById("empAdd").onclick = function () {
+	var tr = table.insertRow( table.rows.length-1 );
+	
+	   var td =  tr.insertCell(0);
+		   var ckb = document.createElement("input");
+		   ckb.type="checkbox";
+	   td.appendChild( ckb);
+	       var txt = document.createElement("input");
+	       txt.type="text";
+	       txt.style.width="100px";
+	   td.appendChild( txt );  
+	   //tr.appendChild( td );
+	   
+	   var td =  tr.insertCell(1);
+		   var txt = document.createElement("input");
+		   txt.type="text";
+		   txt.style.width="100px";
+	    td.appendChild( txt);
+    //tr.appendChild( td );
+    
+    var td =  tr.insertCell(2);
+		   var txt = document.createElement("input");
+		   txt.type="text";
+		   txt.style.width="100px";
+	   td.appendChild( txt);
+	   //tr.appendChild( td );
+
+	   
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 16.오전 11:49:37</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.myDiv{
+	background-color: #f1f1f1;
+	text-align: center;
+	border: solid 1px #d3d3d3;
+	
+	position: absolute;
+	z-index: 9;
+	
+	left: 100px;
+	top: 50px;
+}
+
+.myDivHeader{
+	padding: 10px;
+	cursor: move;
+	z-index: 10;
+	background-color: #2396f3;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+<div id="myDiv1" class="myDiv">
+	<div id="myDiv1Header" class="myDivHeader">Click Here</div>
+	<p>DragDrop</p>
+	<p>DragDrop</p>
+	<p>Div</p>
+</div>
+
+<script>
+function draggable(elem) {
+	
+	var pos1 = 0, pos2 = 0;
+	var pos3 = 0, pos4 = 0;
+	
+	document.getElementById(elem.id + "Header").onmousedown = dragMouseDown;
+	
+	// 클로저(함수안에 있는 함수)
+	function dragMouseDown(){
+		if(event.button == 0) {
+		pos3 = event.clientX; // 원래 window.event.clientX인데 window는 최상위 계층이라 생략할 수 있다.
+		pos4 = event.clientY;
+		
+		// pos3,4는 body의 기준좌표
+		document.onmousemove = elementDrag;
+		document.onmouseup = closeDragElement;
+		}
+	}
+
+	function elementDrag() {
+		if(event.button == 0) {
+		pos1 = pos3 - event.clientX; // 움직인 x의 거리
+		pos2 = pos4 - event.clientY; // 움직인 y의 거리
+		
+		elem.style.left = (elem.offsetLeft - pos1) + "px";
+		elem.style.top = (elem.offsetTop - pos2) + "px";
+		
+		pos3 = event.clientX;
+		pos4 = event.clientY;
+		}
+	}
+
+	function closeDragElement() {
+		if(event.button == 0) {
+		document.onmousemove = null;
+		document.onmouseup = null; 
+		}
+	}
+
+}
+
+draggable(document.getElementById("myDiv1"));
+</script>
+</body>
+</html>
