@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 17.오후 3:39:41</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<!-- BOM - screen -->
+<!-- 사용자 화면에 대한 정보를 포함하고 있는 객체 -->
+<p id="demo"></p>
+<script>
+var demo = document.getElementById("demo");
+
+var output = "";
+output += screen.width + "/" + screen.height + "<br>";
+
+output += screen.availWidth + "/" + screen.availHeight + "<br>"; // 작업표시줄 제외한 크기
+
+output += screen.colorDepth + "<br>" // 화면의 색상수를 비트 단위로 표현한 값
+
+output += screen.pixelDepth + "<br>" // 화면의 픽셀 깊이를 비트 단위로 표현한 값
+
+demo.innerHTML = output;
+</script>
+</body>
+</html>

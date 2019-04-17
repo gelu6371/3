@@ -25,8 +25,7 @@ tr > td:first-child{
 </style>
 </head>
 <body>
-<table id="tblEmp">
-<thead>
+<table id="tblEmp"><thead>
 <tr>
 <th><input type="checkbox" id="ckbAll"/>Lorem.</th>
 <th>Hic!</th>
@@ -62,6 +61,18 @@ tr > td:first-child{
 </table>
 <p id="demo"></p>
 <script>
+document.getElementById("empEdit").onclick = function() {
+	var ckblist = document.querySelectorAll("tbody [type='checkbox']");
+	var demo = document.getElementById("demo");
+	for (var i = 0; i < ckblist.length; i++) {
+		if (ckblist[i].checked   == true ) {
+			var ckb = ckblist[i];
+			var value = ckb.parentNode.nextElementSibling;
+			demo.innerHTML = value.firstChild.nodeValue;
+	}
+	} 
+}
+
 /* 
 document.getElementById("ckbAll").onclick = function(){
 		var ckblist = document.getElementsByClassName("sub");

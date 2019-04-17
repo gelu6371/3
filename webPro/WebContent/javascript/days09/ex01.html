@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 17.오전 8:48:28</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<!-- html DOM 이벤트 정리 -->
+<h1 onclick="this.innerHTML = '클릭 미'">Click Me</h1>
+<h1 id="htag" onclick="this.innerHTML = '클릭 미'">Click Me</h1>
+<script>
+function changeText(elem) {
+	elem.innerHTML = "클릭 미";
+}
+
+// getElementById : DOM 메서드
+document.getElementById("htag").onmouseover = function () {
+	this.style.color = "red";
+}
+document.getElementById("htag").onmouseout = function () {
+	this.style.color = "black";
+}
+</script>
+
+<input type="text" id="message" />
+<script>
+document.querySelector("input[type=text]").onchange = function () {
+	console.log("onchange 이벤트");
+	this.value = this.toUpperCase();
+};
+// document.querySelector(selectors);
+// document.querySelectorAll(selectors);
+</script>
+<br>
+<button type="button" id="btn">버튼</button>
+<script>
+var nodeList = document.getElementsByTagName("button");
+nodeList[0].addEventListener("click", function(e) {
+	// alert(this.innerHTML); // 버튼
+	// alert(this.id); // btn
+}, false);
+</script>
+<br>
+<!-- <p name="demo">demo</p> : p태그는 name 속성 사용하지 못한다. -->
+<input id="demo" name="demo" type="text" alt="데모"/>
+<script>
+var hcoll = document.getElementByName("demo");
+/* hcoll[0].attachEvent("change", function () {
+	console.log(this.value);
+}); attachEvent : IE8이하 및 오페라에서 사용가능
+*/
+
+var p = document.getElementById("demo");
+</script>
+</body>
+</html>

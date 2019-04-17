@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 17.오후 3:49:19</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<!-- BOM - location -->
+<button onclick="btn_move()">페이지 이동</button>
+<!-- 현재 페이지에 URL(주소)에 대한 정보를 갖고 있는 객체 -->
+<script>
+function btn_move() {
+	// alert(location.href);
+	location.href = "ex10.html";
+	// location.assign("http://www.naver.com");
+}
+
+console.log(location.hostname);
+console.log(location.pathname);
+console.log(location.protocol);
+console.log(location.port); // 기본포트(80)이면 생략된다.
+
+
+</script>
+</body>
+</html>

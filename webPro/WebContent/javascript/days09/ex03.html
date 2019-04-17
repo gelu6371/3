@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 17.오전 11:40:36</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<div id="demo">
+<p id="p3">first</p>
+<p id="p1">lorem.</p> 
+<p id="p2">ipsum.</p>
+</div>
+<script>
+var cp = document.createElement("p");
+var content = "cp_text";
+var cp_text = document.createTextNode(content);
+cp.appendChild(cp_text);
+
+var demo = document.getElementById("demo");
+// demo.appendChild(cp);
+var p1 = document.getElementById("p1");
+
+// p1 -> cp 교체
+// demo.replaceChild(cp, p1);
+
+// demo.replaceChild(cp, p1) 안쓰고도 p1을 제거하고 cp를 추가 할 수 있다.
+// insertBefore() // 앞에 집어 넣겠다.
+demo.insertBefore(cp, p1);
+demo.removeChild(p1);
+
+
+
+// nodeList         list
+// HTMLCollection   coll
+// 모두 배열 처럼              list[0], coll[0] 이렇게 사용할수 있다.
+// 차이점 
+// list  push(), pop(), join() 배열처럼 사용 가능
+// coll은    X       X       X    사용 못한다.
+
+</script>
+</body>
+</html>
