@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 18.오후 4:08:03</title>
+<link rel="stylesheet" type="text/css" href="">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="/webPro/jquery/jquery-3.4.0.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("a").click(function (event) {
+		event.preventDefault();
+		$(this).hide();
+	});
+	$("p").click(function(event) {
+		// alert(this.innerHTML);
+		// alert(this.html());
+		// alert($(this).html());
+		$(this).hide(4000, function() {
+		alert("숨김 성공");			
+		});
+	});
+});
+</script>
+<style>
+</style>
+</head>
+<body>
+<a href="http://www.naver.com">Click to hide me too</a>
+
+<p>Lorem ipsum.</p>
+<p>Veritatis voluptas!</p>
+<p>Accusantium reprehenderit?</p>
+<p>Impedit molestiae.</p>
+<p>Possimus voluptatem.</p>
+<!-- <script type="text/javascript"></script> 
+      type="text/javascript" 속성은 html5 부터는 필요 X  -->
+<!--
+ 
+1. jquery 사용하면 다운로드
+   ㄱ. 개발 버전 (압축 X)
+   ㄴ. 제작 버전 (압축 O)
+2. CDN(Content Delevery Network) 호스팅
+  ㄱ. 구글CDN
+  ㄴ. MSCDN
+3. jquery 사용하는 문법(형식)
+   html 요소 선택 + 작업
+   기본 구조 
+  html 요소 선택 : $(selector).action(); 처리
+4. 항상 <script> body 닫기 위해 코딩한 이유
+   html 요소 로딩 전부 된 후.... 처리
+   ㄱ. window.onload = function () {}
+   ㄴ. $(document).ready(function() {
+   
+   	 });
+     ㄴ이랑 같은 코딩이 아래와 같다.
+     $(function () {
+     });  	 
+-->  
+</body>
+</html>
