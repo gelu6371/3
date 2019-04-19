@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 19.오전 10:35:47</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+DOM removal :
+empty(), remove(), unwrap(), detach()
+<div class="container">
+ <div class="hello">Hello</div>
+ <div class="goodbye">Goodbye</div>
+</div>
+<script>
+$(".hello").remove(); // hello 클래스 가진 모든 객체 DOM에서 제거
+$(".hello").empty(); // hello 클래스 안의 자식 노드 집합이 DOM에서 제거(껍데기(div태그 같은것들)은 남아있음)
+</script>
+</body>
+</html>

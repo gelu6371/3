@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 19.오후 12:20:56</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+비밀번호 : <input type="password" autofocus="autofocus"  /><br>
+<p id="demo">경고 Caps lock is ON</p>
+
+<script>
+$(":password").keyup(function() {
+	if (event.getModifierState("CapsLock")) { // CapsLock이 눌려져 있다면
+		$("#demo").css('color', 'red').show();
+	}else{
+		$("#demo").css('color', 'red').hide();
+	}	
+});
+
+
+</script>
+</body>
+</html>

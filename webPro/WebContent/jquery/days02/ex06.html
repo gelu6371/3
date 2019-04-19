@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 19.오전 10:43:59</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+div {
+    border: 2px solid blue;
+}
+
+p {
+    background: yellow;
+    margin: 4px;
+  }
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+
+<button>wrap/unwrap</button>
+
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+
+<script>
+var pTags = $( "p" );
+$( "button" ).click(function() {
+  if ( pTags.parent().is( "div" ) ) { // pTags의 부모가 div태그로 감싸져 있는가?
+    pTags.unwrap();
+  } else {
+    pTags.wrap( "<div></div>" ); // 안 감싸져 있으면 div 태그로 감싸라
+  }
+});
+</script>
+</body>
+</html>

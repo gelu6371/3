@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 19.오후 2:29:24</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+div {
+    color: blue;
+  }
+  div#five {
+    color: red;
+  }
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+ <div id="one"></div>
+ <div id="two"></div>
+ <div id="three"></div>
+ <div id="four"></div>
+ <div id="five"></div>
+ 
+ <script>
+ var arr = [ "one", "two", "three", "four", "five" ];
+ var obj = { one: 1, two: 2, three: 3, four: 4, five: 5 };
+ 
+ $.each( arr, function( i, val ) {
+	  $( "#" + val ).text( "Mine is " + val + "." );
+	  return ( val !== "three" ); // === !== : 타입까지 비교
+	});
+ 
+ $.each( obj, function( i, val ) {
+	  $( "#" + i ).append( document.createTextNode( " - " + val ) );
+	});
+ </script>
+</body>
+</html>

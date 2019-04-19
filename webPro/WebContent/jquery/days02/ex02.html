@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 19.오전 9:26:56</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	var fn = function calleeTest() {
+		document.write("A");
+		return arguments.callee;
+	};
+	// document.write(fn);
+	document.write(fn());
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
