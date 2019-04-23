@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오후 2:02:13</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	$(":input").css("border","solid 1px gray");
+	$(":text").css("background-color","yellow");
+	// $(":checked")
+	// $(":submit");
+	// $(":reset");
+	// $(":disabled").css("background-color", "red");
+	// $(":enabled").css("background-color", "blue");
+	// $(":button");
+	// $(":image");
+	// $(":file");
+	// $(":password");
+	$(":selected").css("background-color", "aqua");
+});
+</script>
+</head>
+<body>
+<select>
+ <option>hong</option>
+ <option selected="selected">park</option>
+ <option>admin</option>
+</select>
+<input type="text" /><br>
+<input type="text" disabled="disabled" /><br>
+<input type="file" /><br>
+<textarea cols="30" rows="10"></textarea><br>
+<input type="password" /><br>
+<input type="email" /><br>
+<input type="checkbox" checked="checked"/>checkbox 1<br>
+<input type="checkbox" />checkbox 2<br>
+<input type="submit" /><br>
+<input type="reset" /><br>
+</body>
+</html>

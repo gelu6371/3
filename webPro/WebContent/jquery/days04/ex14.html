@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오후 4:03:48</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	$("button:first").on("click", function() {
+		// $("button:last").trigger();
+		$("button:last").click();
+	});
+ /* $("button:last").on("click",function() {
+		alert("btn 5 클릭");
+	}); */
+ $("button:last").click(()=>{
+	 alert("람다 test");
+ });
+	
+	$("#wrap").on("click","h1", function () { // wrap안에 있는 h1 클릭할때
+		
+	});
+});
+</script>
+</head>
+<body>
+<h1>Lorem.</h1>
+<h1>Sequi.</h1>
+<div id="wrap">
+<h1>Maxime!</h1>
+<h1>Quo.</h1>
+</div>
+<h1>Ullam.</h1>
+<button>btn1</button>
+<button>btn2</button>
+<button>btn3</button>
+<button>btn4</button>
+<button>btn5</button>
+</body>
+</html>

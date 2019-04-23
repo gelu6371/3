@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오후 12:12:57</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	function animateDiv(){
+	$("div:eq(0)")
+	.animate({width:"50%"},"slow")
+	.animate({width:"100%"},"slow",animateDiv);
+	}
+	
+	animateDiv();
+	
+	$("button").click(function() {
+		$(":animated").css("background-color","yellow");
+	});
+	
+	$("div:contains('test')").css("color","white");
+	
+	$("p:has(span)").css("border","solid 2px red");
+	
+	$("p:empty").css("background","green");
+});
+</script>
+</head>
+<body>
+<p>Lorem ipsum dolor sit.</p>
+<p>Voluptates <span>error</span> beatae temporibus!</p>
+<p>Facilis veritatis sapiente odit.</p>
+<p>Eos perferendis <span>placeat</span> dolorem.</p>
+<p style="height:10px"></p>
+<p>Rerum sint quo ex.</p>
+<hr>
+<button>change color</button>
+<div style="background-color: red">box1</div>
+<div style="background-color: green">box2 test</div>
+<div style="background-color: blue">box3</div>
+</body>
+</html>

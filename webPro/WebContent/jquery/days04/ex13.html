@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오후 3:06:32</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	context. strokeStyle= $("select").text();
+	
+	$(canvas).on({
+		mousedown: function (event) {
+			 if( event.which == 1){
+			var position = $(this).offset();
+			var x = event.pageX - position.left;
+			var y = event.pageY - position.top;
+			
+			context.beginPath();
+			context.moveTo(x, y);
+			 }
+		},
+		mousemove: function(event) {
+			 if( event.which == 1){
+			var position = $(this).offset();
+			var x = event.pageX - position.left;
+			var y = event.pageY - position.top;
+			
+			context.lineTo(x, y);
+			context.stroke();
+			 }
+		},
+		mouseup: function (event) {
+			var position = $(this).offset();
+			var x = event.pageX - position.left;
+			var y = event.pageY - position.top;
+			
+			context.lineTo(x, y);
+			context.stroke();
+		}
+	});
+	$("select").change(function (){ 
+		   context. strokeStyle= $(this).val();
+	   });
+});
+</script>
+</head>
+<body>
+선 색 :
+<select>
+  <option>black</option>
+  <option>red</option>
+  <option>green</option>
+  <option>blue</option>
+</select>
+<br>
+ <canvas id="canvas" width="700px" height="400px" style="border: 3px solid black">
+</canvas>
+</body>
+</html>

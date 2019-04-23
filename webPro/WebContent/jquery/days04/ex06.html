@@ -9,11 +9,50 @@
 </style>
 <script>
 $(document).ready(function() {
-	
+	$("p")
+	 .first().css("color","red")
+	 .end()
+	 .last().css("color","blue")
+	 .end()
+	 .eq(5).css("color","green")
+	 .end()
+	 .filter(":odd").css("background-color","fuchsia")
+	 .end()
+	 .filter(function(index, elem) {
+	 	return index%2==0;
+	 }).css("background-color","aqua");
+	 // .filter(".box").css("color","aqua");
+	 // .not(".box").css("color","aqua");
 });
 </script>
 </head>
 <body>
+<p>Lorem ipsum.</p>
+<p>Repellat molestiae.</p>
+<p>Labore nam.</p>
+<p class="box">Illo iusto.</p>
+<p>Labore rerum?</p>
+<p >Qui quisquam!</p>
+<p class="box">Illum fuga.</p>
+<p>Recusandae laborum.</p>
+<p class="box">Optio nisi.</p>
+<p>Corrupti voluptatibus.</p>
+<!-- 필터 -->
+<!-- 
+first()
+last()
+eq()
+-->
 
+<!-- 
+형제
+siblings()
+next()
+prev()
+nextAll()
+prevAll()
+nextUntil()
+prevUntil() 
+-->
 </body>
 </html>

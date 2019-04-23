@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오전 11:37:57</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	$("*").css("color","red");
+	$("#box").css("color","blue");
+	$(".team").css("color","green");
+	$("li:first, li:last").css("color", "blue");
+	$("li:even").css("color", "blue");
+	$("li:odd").css("color", "red");
+	$("li, p, h1").css("color","gray");
+	$("div").css("border","solid 1px gray");
+	// $("p:only-child").css("background-color", "blue");
+	$("p:only-of-type").css("background-color", "blue");
+});;
+</script>
+</head>
+<body>
+<div>
+<p>Lorem ipsum.</p>
+<p>Recusandae ipsa.</p>
+</div>
+<div>
+<p>Lorem ipsum.</p>
+</div>
+<div>
+<p>Lorem ipsum.</p>
+<h3>Lorem.</h3>
+</div>
+
+<h1>Lorem ipsum dolor sit amet.</h1>
+<p class="team">Lorem ipsum dolor sit.</p>
+<p id="box" class="team">Explicabo magni amet inventore!</p>
+<p>Asperiores ex quae veniam!</p>
+<ul>
+	<li>Lorem.</li>
+	<li class="team">Nam.</li>
+	<li>Atque!</li>
+	<li>Odio!</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오후 12:27:39</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	$("td:empty").css("background","yellow");
+	// $("td:not(:empty)").css("background","red");
+	// $("td:parent").css("background","fuchsia");
+	$("tr:last, tr:eq(5), tr:eq(7)")
+	 .css("background","aqua")
+	 .hide();
+	
+	$("button").click(function () {
+		// $("tr:hidden").show();
+		$("tr:visible").hide();
+	});
+});
+</script>
+</head>
+<body>
+<button>show</button>
+<table border="1"width="300px">
+<tr>
+<th>Lorem.</th>
+<th>Aliquid.</th>
+<th>Doloremque?</th>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Delectus.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Eius.</td>
+	<td>Laudantium!</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Nostrum.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td></td>
+	<td>Iusto?</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Ducimus!</td>
+	<td>Iure.</td>
+</tr>
+<tr>
+	<td></td>
+	<td>Velit.</td>
+	<td>Quis.</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Mollitia.</td>
+	<td>Delectus.</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td></td>
+	<td>Distinctio!</td>
+</tr>
+<tr>
+	<td>Lorem.</td>
+	<td>Dolores!</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td>Nobis.</td>
+	<td>Quod.</td>
+</tr>
+</table>
+</body>
+</html>
