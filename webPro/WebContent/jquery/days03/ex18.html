@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오후 3:16:57</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	$("#start").click(function () {
+		$("div").animate({left: "100px"}, 5000);
+		$("div").animate({fontSize: "3em"}, 5000);
+	});
+	$("#stopff").click(function () {
+		$("div").stop();
+	});
+	$("#stopft").click(function () {
+		$("div").stop(false,true);
+	});	
+	$("#stoptf").click(function () {
+		$("div").stop(true,false);
+	});
+	$("#stoptt").click(function () {
+		$("div").stop(true,true);
+	});
+});
+</script>
+</head>
+<body>
+<button id="start">start</button>
+<button id="stopff">stop(f,f)</button>
+<button id="stopft">stop(f,t)</button>
+<button id="stoptf">stop(t,f)</button>
+<button id="stoptt">stop(t,t)</button>
+<div style="background-color: aqua;width: 200px;height: 100px;position: absolute;">HELLO</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오후 3:06:58</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+#panel, #flip {
+	padding: 5px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #555;
+	color: white;
+	border: solid 1px #666;
+	border-radius: 3px;
+}
+#panel{
+	padding: 50px;
+	display: none;
+}
+</style>
+<script>
+$(document).ready(function() {
+	$("#flip").click(function () {
+		$("#panel").slideDown(5000); // 내부적으로는 animate()가 있다.
+	});
+	$("#stop").click(function () {
+		$("#panel").stop(); // 기본은 stop(false, false)이다.
+	});
+});
+</script>
+</head>
+<body>
+<!-- stop(clearQueue, jumpToEnd) : 애니메이션 효과 끝나기 전에 중지시킬때 -->
+<!-- [clearQueue] [,jumpToEnd] -->
+<!-- stop() == stop(false, false) -->
+<button id="stop">Stop</button>
+<div id="flip">Start</div>
+<div id="panel">Hello World</div>
+</body>
+</html>

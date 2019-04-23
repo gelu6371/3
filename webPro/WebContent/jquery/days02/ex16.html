@@ -126,6 +126,10 @@ $("#myBtn").on("click", function() {
 $(".modal-header .close").click(function () {
 	$(".modal").css("display","none");
 });
+$("body").click(function (){
+	  if( $(event.target).attr("id")  == "myModal")
+		  $(".modal").css("display","none");	   
+});
 </script>
 </body>
 </html>

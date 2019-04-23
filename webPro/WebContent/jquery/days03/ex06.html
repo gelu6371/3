@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오전 11:05:47</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.panel, .flip{
+	padding: 5px;
+	text-align: center;
+	background: #e5eecc;
+	border: solid 1px #c3c3c3;
+}
+.panel{
+	padding: 50px;
+	display: none;
+}
+.flip:hover{
+	cursor: pointer;
+}
+</style>
+<script>
+$(document).ready(function() {
+	$(".flip").click(function () {
+		// $(this).next().slideDown();
+		// $(this).next().slideUp();
+		// $(this).next().slideToggle();
+		
+		$("div.open").slideUp().removeClass("open");
+		$(this).next().slideDown().addClass("open");
+		
+	});
+});
+</script>
+</head>
+<body>
+<!-- jquery slide -->
+<div class="flip">slide 01</div>
+<div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quo officiis error veritatis quod explicabo rem sit inventore laboriosam fugiat eligendi soluta sequi nesciunt voluptates aspernatur commodi omnis. Quisquam saepe.</div>
+<div class="flip">slide 01</div>
+<div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quo officiis error veritatis quod explicabo rem sit inventore laboriosam fugiat eligendi soluta sequi nesciunt voluptates aspernatur commodi omnis. Quisquam saepe.</div>
+<div class="flip">slide 01</div>
+<div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quo officiis error veritatis quod explicabo rem sit inventore laboriosam fugiat eligendi soluta sequi nesciunt voluptates aspernatur commodi omnis. Quisquam saepe.</div>
+<div class="flip">slide 01</div>
+<div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quo officiis error veritatis quod explicabo rem sit inventore laboriosam fugiat eligendi soluta sequi nesciunt voluptates aspernatur commodi omnis. Quisquam saepe.</div>
+<div class="flip">slide 01</div>
+<div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quo officiis error veritatis quod explicabo rem sit inventore laboriosam fugiat eligendi soluta sequi nesciunt voluptates aspernatur commodi omnis. Quisquam saepe.</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오전 10:42:27</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	// $("div > button").each(function (index, elem) {
+	$("button", "div").each(function (index, elem) {
+		console.log(index + ":" + $(elem).text());
+	});
+});
+</script>
+</head>
+<body>
+<button>btn1</button>
+<button>btn2</button>
+<button>btn3</button>
+<div>
+	<button>btn4</button>
+	<button>btn5</button>
+	<button>btn6</button>
+	<button>btn7</button>
+</div>
+<button>btn8</button>
+<button>btn9</button>
+<button>btn10</button>
+</body>
+</html>

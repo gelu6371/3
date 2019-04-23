@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오전 10:12:17</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.ancestors * {
+	display: black;
+	border: solid 2px gray;
+	padding: 5px;
+	margin: 15px;
+}
+
+span {
+	display: block;
+}
+</style>
+<script>
+$(document).ready(function() {
+	
+	// $("div").children().css({
+	/* $(".ancestors").children().css({ //children은 직계 자식만 찾는다.  
+           // color: "red",
+          border: "solid 2px blue"
+    }); */
+	
+		
+	$("div").children("ul").css({
+		"color":"red",
+		"border":"solid 2px red"
+	});
+	
+	$("div").find("span").css("background-color","green");
+	
+	
+	
+	/* 
+	$("span")
+	 .css("border-color","red")
+	 // .parents("ul") // span의 부모들 중에 ul 만
+	 // .parentsUntil("div") // span의 부,조,증... < div
+	 .css({"color":"blue","border":"solid 2px blue"});
+	 // .parents()
+	 // .css({"color":"blue","border":"solid 2px blue"});
+	 // .parent()
+	 // .css({"color":"blue","border":"solid 2px blue"});
+	*/
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+	<div style="width: 500px">div(증조부모) 
+		<ul>ul(조부모)
+			<li>li(부모)<span>span</span></li>
+
+		</ul>
+		<ul>ul(조부모)
+			<li>li(부모)<span>span</span></li>
+		</ul>
+	</div>
+	<div style="width: 500px">div(조부모)
+	<p>p(부모)
+	<span>span</span>
+	</p>
+	</div>
+</div>
+
+
+
+
+
+<!-- jquery 탐색 -->
+<!-- 
+parent 			부모 - parent(), parents(), parentsUntil()
+child 			자식 - children(), fine()
+siblings 		형제들
+descendants 	후손
+ancestors 		조상
+ -->
+</body>
+</html>

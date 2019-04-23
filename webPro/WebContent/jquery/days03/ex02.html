@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오전 9:35:59</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+div {
+    background: white;
+  }
+.red {
+    background: red;
+  }
+.red.green {
+    background: green;
+  }
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+<div>This div should be white</div>
+<div class="red">This div will be green because it now has the "green" and "red" classes. It would be red if the addClass function failed.</div>
+<div>This div should be white</div>
+<p>There are zero green divs</p>
+
+<script>
+$("div").addClass(function (index, currentClassName) {
+	// console.log(index + " : " + currentClassName);
+	var className;
+	if (currentClassName == "red") {
+		className = "green";
+	}
+	return className;
+});
+</script>
+</body>
+</html>

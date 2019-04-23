@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오전 10:25:08</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+<a href="http://www.sisit.co.kr">(주)SiSt</a>
+
+<script>
+$("a").on("click", function() {
+	event.preventDefault();
+});
+</script>
+
+<form action="">
+ test : <input type="text" /><br>
+ test : <input type="text" /><br>
+</form>
+
+<form action="">
+ msg : <input type="text" /><br>
+ msg : <input type="text" /><br>
+</form>
+
+<button>제출</button>
+<script>
+$("button").on("click", function() {
+	var form = $("form")[1];
+	form.reset();
+});
+
+</script>
+</body>
+</html>

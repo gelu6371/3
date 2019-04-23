@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오전 9:01:41</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+p {
+    margin: 8px;
+    font-size: 16px;
+  }
+.selected {
+    color: blue;
+  }
+.highlight {
+    background: yellow;
+  }
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+<a href="test.html">test.html</a><br> <!-- http://localhost/webPro/jquery/days03/test.html  -->
+<a href="/test.html">test.html</a><br> <!-- http://localhost/test.html  -->
+
+<p>Hello</p>
+<p>and</p>
+<p>Goodbye</p>
+
+<!-- addClass() -->
+<script>
+$( "p" )
+//        .last() // p태그의 마지막것만
+//        .addClass( "selected" );
+
+$( "p:last" ).addClass( "selected highlight" ); // 마지막꺼에 selected와 highlight의 스타일을 적용하겠다.
+         
+/* 
+// 모든 p태그에 selected 스타일 주고 마지막꺼는 highlight 스타일을 주어라..        
+$( "p" ).addClass( "selected" );
+        .last() 
+        .addClass( "highlight" ); 
+*/
+</script>
+
+</body>
+</html>

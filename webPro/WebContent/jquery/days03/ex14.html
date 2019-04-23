@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오후 2:16:45</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+
+<ul class="first">
+  <li class="foo">list item 1</li>
+  <li>list item 2</li>
+  <li class="bar">list item 3</li>
+</ul>
+<ul class="second">
+  <li class="foo">list item 1</li>
+  <li>list item 2</li>
+  <li class="bar">list item 3</li>
+</ul>
+
+<script>
+$( "ul.first" )
+ .find( ".foo" )
+   .css( "background-color", "red" )
+ .end()
+ .find( ".bar" )
+   .css( "background-color", "green" );
+</script>
+</body>
+</html>

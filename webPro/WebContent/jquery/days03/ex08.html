@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오전 11:37:15</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
+</head>
+<body>
+<input type="radio" name="direction" value="+"/>+
+<input type="radio" name="direction" value="-"/>-
+<button>Run</button>
+<div style="background-color: green;height: 100px;width: 100px;position: absolute;"></div>
+<script>
+ $("button").click(function () {
+	var dir = $(":radio:checked").val();
+	 $("div").animate({
+		left: dir + "=50px"
+		/* , opacity: "0.5"
+		, height: "150px"
+		, width: "150px" */
+	});
+}); 
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 23.오전 10:38:11</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+</style>
+<script>
+$(document).ready(function() {
+	$( "*", document.body ).each(function() { // body 태그 안에 있는 모든 태그(element)들 for each문 처럼 반복하겠다.
+		  var parentTag = $( this ).parent().get( 0 ).tagName;
+		  $( this ).prepend( document.createTextNode( parentTag + " > " ) );
+		});
+});
+</script>
+</head>
+<body>
+<div>div,
+  <span>span, </span>
+  <b>b </b>
+</div>
+ 
+<p>p,
+  <span>span,
+    <em>em </em>
+  </span>
+</p>
+ 
+<div>div,
+  <strong>strong,
+    <span>span, </span>
+    <em>em,
+      <b>b, </b>
+    </em>
+  </strong>
+  <b>b </b>
+</div>
+</body>
+</html>

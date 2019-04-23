@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019. 4. 22.오후 4:04:20</title>
+<link rel="stylesheet" type="text/css" href="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+p {
+	border: solid 1px red;
+}
+</style>
+<script>
+$(document).ready(function() {
+	/* 
+	console.log($("div").html());
+	console.log($("div").text());
+	$("div").html("테스트"); // set
+	console.log($("div").html()); // get
+	$("div").text("변경"); // set
+	console.log($("div").text()); // get
+	
+	var value = $("input").val(); // set
+	$("input").val("test"); // get */
+});
+
+// append() 맨 마지막 자식 추가
+// prepend() 첫 자식 추가
+</script>
+</head>
+<body>
+
+<div id="demo">
+<p id="p1">p 1</p>
+<p id="p2">p 2</p>
+<p id="p3">p 3</p>
+</div>
+
+<script>
+$("#p1").click(function () {
+	// $("#demo").empty(); // 자식제거
+	$("#demo").remove(); // div#demo 제거
+});
+$("#demo")
+.prepend("<p id='p0'>p 0</p>")
+.append("<p id='p4'>p 4</p>");
+$("#p2")
+.before("<p id='p5'>p 5</p>")
+.after("<p id='p6'>p 6</p>")
+</script>
+<!-- 
+<input type="text" value="admin" />
+<div >box</div>
+ -->
+</body>
+</html>
